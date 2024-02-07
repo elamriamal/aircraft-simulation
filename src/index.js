@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
 import mapboxgl from "mapbox-gl";
 import "./assets/styles.css";
@@ -8,8 +8,6 @@ import { Airplane } from "./components/Airplane";
 import { TimelineSlider } from "./components/TimelineSlider";
 import { AltitudeSlider } from "./components/AltitudeSlider";
 import aircraftIcon from "./assets/aircraft-alert-none.svg";
-import Tooltip from "./components/Tooltip";
-import ReactDOM from 'react-dom';
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibmVsbGl0IiwiYSI6ImNrb3dncHdnOTA1emQybnBkZ3N1MjhzYW8ifQ.uqKPevtCLOPOjX88-7ZK9w";
@@ -21,48 +19,15 @@ function App() {
   const [map, setMap] = useState();
   const [timestamp, setTimestamp] = useState(NOW_TIMESTAMP);
   const [flightLevel, setFlightLevel] = useState(0);
-  const [showPopup, setShowPopup] = useState(true);
-  const mapContainerRef = useRef(null);
-  const tooltipRef = useRef(new mapboxgl.Popup({ offset: 15 }));
   useEffect(() => {
     const map = new mapboxgl.Map({
-      // container: "map",
-      container: mapContainerRef.current,
+      container: "map",
       style: "mapbox://styles/mapbox/light-v10",
       center: 
         [-6.494917884024034, 51.69935897822677 ]
       ,
       zoom: 3,
       projection: "mercator"
-    });
-    // change cursor to pointer when user hovers over a clickable feature
-    map.on('mouseenter', e => {
-      if (e.features.length) {
-        map.getCanvas().style.cursor = 'pointer';
-      }
-    });
-
-    // reset cursor to default when user is no longer hovering over a clickable feature
-    map.on('mouseleave', () => {
-      map.getCanvas().style.cursor = '';
-    });
-
-    // add tooltip when users mouse move over a point
-    map.on('mousemove', e => {
-      const features = map.queryRenderedFeatures(e.point);
-      if (features.length) {
-        const feature = features[0];
-
-        // Create tooltip node
-        const tooltipNode = document.createElement('div');
-        ReactDOM.render(<Tooltip feature={feature} />, tooltipNode);
-
-        // Set tooltip on map
-        tooltipRef.current
-          .setLngLat(e.lngLat)
-          .setDOMContent(tooltipNode)
-          .addTo(map);
-      }
     });
     map.on("load", () => {
       // Add aircraft Image
@@ -73,7 +38,6 @@ function App() {
           [-6.494917884024034, 51.69935897822677],  // Coin Sud-Ouest
           [9.732690059356145, 41.25166002712723]    // Coin Nord-Est
         ];
-     
         map.fitBounds(bounds);
         map.addImage("airplane", img);
       };
@@ -83,7 +47,7 @@ function App() {
   }, []);
   return (
     <div className="wrapper">
-      <div id="map" ref={mapContainerRef} >
+      <div id="map">
         {map ? (
           <>
             <Route routePoints={routePoints} map={map} />
