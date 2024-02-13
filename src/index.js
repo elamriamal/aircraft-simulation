@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { render } from "react-dom";
+import * as ReactDOM from "react-dom/client";
+
 import mapboxgl from "mapbox-gl";
 import "./assets/styles.css";
 import { routePoints } from "./data/route";
 import { Route } from "./components/Route";
 import { Airplane } from "./components/Airplane";
 import { TimelineSlider } from "./components/TimelineSlider";
-import { AltitudeSlider } from "./components/AltitudeSlider";
-import aircraftIcon from "./assets/aircraft-alert-none.svg";
+import { v4 as uuidv4 } from "uuid";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibmVsbGl0IiwiYSI6ImNrb3dncHdnOTA1emQybnBkZ3N1MjhzYW8ifQ.uqKPevtCLOPOjX88-7ZK9w";
@@ -18,30 +18,21 @@ export const MAX_TIMESTAMP = 1674249811; // Friday, 20 January 2023 21:23:31
 function App() {
   const [map, setMap] = useState();
   const [timestamp, setTimestamp] = useState(NOW_TIMESTAMP);
-  const [flightLevel, setFlightLevel] = useState(0);
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/mapbox/light-v10",
-      center: 
-        [-6.494917884024034, 51.69935897822677 ]
-      ,
-      zoom: 3,
-      projection: "mercator"
+      center: [-6.494917884024034, 51.69935897822677],
+      zoom: 5,
+      projection: "mercator",
     });
     map.on("load", () => {
-      // Add aircraft Image
-      const img = new Image();
-      img.src = aircraftIcon;
-      img.onload = () => {
-        const bounds = [
-          [-6.494917884024034, 51.69935897822677],  // Coin Sud-Ouest
-          [9.732690059356145, 41.25166002712723]    // Coin Nord-Est
-        ];
-        map.fitBounds(bounds);
-        map.addImage("airplane", img);
-      };
-
+      const bounds = [
+        [-6.494917884024034, 51.69935897822677],  // Coin Sud-Ouest
+        [9.732690059356145, 41.25166002712723]    // Coin Nord-Est
+      ];
+      map.fitBounds(bounds);
+      map.setLayoutProperty("country-label", "text-field", ["get", `name_fr`]);
       setMap(map);
     });
   }, []);
@@ -50,13 +41,18 @@ function App() {
       <div id="map">
         {map ? (
           <>
-            <Route routePoints={routePoints} map={map} />
-            <Airplane
-              routePoints={routePoints}
-              map={map}
-              timestamp={timestamp}
-            />
-            
+            {routePoints.map((route) => (
+              <React.Fragment key={uuidv4()}>
+                <Route routePoints={route} map={map} id={uuidv4()} />
+                <Airplane
+                  routePoints={route}
+                  map={map}
+                  timestamp={timestamp}
+                  id={uuidv4()}
+                />
+              </React.Fragment>
+            ))}
+
             <div
               style={{
                 position: "absolute",
@@ -67,7 +63,7 @@ function App() {
                 height: "2.5rem",
                 padding: "0.5rem",
                 display: "flex",
-                background: "#202020"
+                background: "#202020",
               }}
             >
               <div style={{ width: "80px" }}>
@@ -82,25 +78,6 @@ function App() {
                 handleChange={(e) => setTimestamp(parseInt(e.target.value))}
               />
             </div>
-            <div
-              style={{
-                position: "absolute",
-                background: "#202020",
-                top: 0,
-                bottom: "2.5rem",
-                right: 0,
-                zIndex: 1,
-                display: "flex",
-                flexDirection: "column",
-                padding: "1rem"
-              }}
-            >
-              <div style={{ textAlign: "center" }}>{flightLevel}</div>
-              <AltitudeSlider
-                value={flightLevel}
-                handleChange={(e) => setFlightLevel(e.target.value)}
-              />
-            </div>
           </>
         ) : (
           <div>Initialising Map...</div>
@@ -110,5 +87,4 @@ function App() {
   );
 }
 
-
-render(<App />, document.querySelector("#root"));
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
