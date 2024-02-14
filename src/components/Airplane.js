@@ -14,20 +14,30 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
   useEffect(() => {
     map.addSource(AIRPLANE_SOURCE_ID, {
       type: "geojson",
+      'generateId': true,
       data: [],
     });
 
     map.addLayer({
       id: AIRPLANE_LAYER_ID,
       type: "symbol",
+      generateId: true,
       source: AIRPLANE_SOURCE_ID,
       layout: {
         "icon-image": "airport-15",
-        "icon-size": 1.5,
+        "icon-size": 1.75,
         "icon-allow-overlap": true,
         "icon-rotate": ["get", "bearing"],
         "icon-rotation-alignment": "map",
       },
+      'paint': {
+        'icon-opacity': [
+          'case',
+          ['boolean', ['feature-state', 'hover'], false],
+          1,
+          0.6
+        ]
+      }
     });
 
     return () => {
@@ -88,21 +98,62 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
               <p>${bearing}</p>
             </div>
         </div> `)
-          .addTo(map);
+        .addTo(map);
         popin.on("close", () => {});
       }
     });
 
-    // Change the cursor to a pointer when the mouse is over the points layer.
-    map.on("mouseenter", AIRPLANE_LAYER_ID, () => {
-      map.getCanvas().style.cursor = "pointer";
+    map.on('mousemove', AIRPLANE_LAYER_ID, function(e) {
+      if (e.features[0]) {
+        mouseover(e.features[0]);
+        const coordinates = e.features[0].geometry.coordinates.slice();
+        var popin = new mapboxgl.Popup({closeButton: false,//<----
+        closeOnClick: true,
+        closeOnMove: true,});
+        popin
+          .setLngLat(coordinates)
+          .setHTML(`
+          <div style="color: black;">
+            <small>${routePoints.name}</small>
+          </div>`)
+        .addTo(map);
+        popin.on("close", () => {});
+      } else {
+        mouseout();
+      }
+
     });
 
-    // Change it back to a pointer when it leaves.
-    map.on("mouseleave", AIRPLANE_LAYER_ID, () => {
-      map.getCanvas().style.cursor = "";
+    map.on('mouseout', AIRPLANE_LAYER_ID, function(e) {
+      mouseout();
     });
+    
   }, [AIRPLANE_LAYER_ID, AIRPLANE_SOURCE_ID, map, routePoints, styles.column, styles.row, styles.textSize, timestamp]);
+  
+  let fHover = null;
+  function mouseover(feature) {
+    fHover = feature;
+    map.getCanvasContainer().style.cursor = 'pointer';
 
+    map.setFeatureState({
+      source: AIRPLANE_SOURCE_ID,
+      id: fHover.id
+    }, {
+      hover: true
+    });
+  }
+
+  function mouseout() {
+    if (!fHover) return;
+    map.getCanvasContainer().style.cursor = 'default';
+    map.setFeatureState({
+      source: AIRPLANE_SOURCE_ID,
+      id: fHover.id
+    }, {
+      hover: false
+    });
+    fHover = null;
+
+  }
   return null;
 };
