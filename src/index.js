@@ -28,8 +28,8 @@ function App() {
     });
     map.on("load", () => {
       const bounds = [
-        [-6.494917884024034, 51.69935897822677],  // Coin Sud-Ouest
-        [9.732690059356145, 41.25166002712723]    // Coin Nord-Est
+        [-6.494917884024034, 51.69935897822677], // Coin Sud-Ouest
+        [9.732690059356145, 41.25166002712723], // Coin Nord-Est
       ];
       map.fitBounds(bounds);
       map.setLayoutProperty("country-label", "text-field", ["get", `name_fr`]);
@@ -43,7 +43,7 @@ function App() {
           <>
             {routePoints.map((route) => (
               <React.Fragment key={uuidv4()}>
-                <Route routePoints={route} map={map} id={uuidv4()} />
+                <Route routePoints={route.points} map={map} id={uuidv4()} />
                 <Airplane
                   routePoints={route}
                   map={map}

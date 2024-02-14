@@ -39,11 +39,13 @@ export function getFlightPositionAtTimestamp(routePoints, timestamp) {
     positionAtTimestampFeature,
     positionAtTimestampFeatureOffset
   );
-
+  const actualPointIndex = routePoints.findIndex((rp) => timestamp < rp.time);
+  const actualPoint = routePoints[actualPointIndex];
   return {
     ...positionAtTimestampFeature,
     properties: {
-      bearing: airplaneBearing
+      bearing: airplaneBearing,
+      actualPoint
     }
   };
 }
