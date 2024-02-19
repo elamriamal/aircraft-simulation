@@ -15,7 +15,7 @@ export function getFlightPositionAtTimestamp(routePoints, timestamp) {
 
   const currentEdgeLineString = lineString([
     [prevPoint.longitude, prevPoint.latitude],
-    [nextPoint.longitude, nextPoint.latitude]
+    [nextPoint.longitude, nextPoint.latitude],
   ]);
 
   const percentage =
@@ -39,13 +39,10 @@ export function getFlightPositionAtTimestamp(routePoints, timestamp) {
     positionAtTimestampFeature,
     positionAtTimestampFeatureOffset
   );
-  const actualPointIndex = routePoints.findIndex((rp) => timestamp < rp.time);
-  const actualPoint = routePoints[actualPointIndex];
   return {
     ...positionAtTimestampFeature,
     properties: {
       bearing: airplaneBearing,
-      actualPoint
     }
   };
 }

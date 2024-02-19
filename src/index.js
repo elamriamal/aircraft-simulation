@@ -12,9 +12,10 @@ import { v4 as uuidv4 } from "uuid";
 mapboxgl.accessToken =
   "pk.eyJ1IjoibmVsbGl0IiwiYSI6ImNrb3dncHdnOTA1emQybnBkZ3N1MjhzYW8ifQ.uqKPevtCLOPOjX88-7ZK9w";
 
+export const MAX_TIMESTAMP = 1674249811; // Friday, 20 January 2023 21:23:31
 export const MIN_TIMESTAMP = 1674221811; // Friday, 20 January 2023 13:36:51
 export const NOW_TIMESTAMP = 1674225811; // Friday, 20 January 2023 14:43:31
-export const MAX_TIMESTAMP = 1674249811; // Friday, 20 January 2023 21:23:31
+
 function App() {
   const [map, setMap] = useState();
   const [timestamp, setTimestamp] = useState(NOW_TIMESTAMP);
@@ -23,7 +24,7 @@ function App() {
       container: "map",
       style: "mapbox://styles/mapbox/dark-v10",
       center: [-6.494917884024034, 51.69935897822677],
-      zoom: 5,
+      zoom: 10,
       projection: "mercator",
     });
     map.on("load", () => {
@@ -40,7 +41,7 @@ function App() {
     <div className="wrapper">
       <div id="map">
         {map ? (
-          <>
+          <>routePoints
             {routePoints.map((route) => (
               <React.Fragment key={uuidv4()}>
                 <Route routePoints={route.points} map={map} id={uuidv4()} />
@@ -67,7 +68,7 @@ function App() {
               }}
             >
               <div style={{ width: "80px" }}>
-                Time:{" "}
+                Temps:{" "}
                 {new Date(timestamp * 1000).toLocaleTimeString().slice(0, -3)}
               </div>
               <TimelineSlider
