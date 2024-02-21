@@ -83,34 +83,88 @@ export const routePoints = [
     points: [
       {
         time: 1674226873,
-        latitude: 50.6292,
-        longitude: 3.0572,
+        latitude: 48.8566,
+        longitude: 2.3522,
+        altitudeFt: 0,
+      },
+      {
+        time: 1674228000,
+        latitude: 49.6299,
+        longitude: 2.9507,
+        altitudeFt: 20000,
+      },
+      {
+        time: 1674229000,
+        latitude: 50.0702,
+        longitude: 3.0046,
+        altitudeFt: 25000,
+      },
+      {
+        time: 1674230000,
+        latitude: 50.2794,
+        longitude: 3.0324,
+        altitudeFt: 27000,
+      },
+      {
+        time: 1674231000,
+        latitude: 50.5805,
+        longitude: 3.0792,
         altitudeFt: 31000,
       },
       {
-        time: 1674230570,
-        latitude: 50.5795,
-        longitude: 3.0637,
+        time: 1674231500,
+        latitude: 50.5873,
+        longitude: 3.0795,
         altitudeFt: 31000,
       },
       {
-        time: 1674232223,
-        latitude: 50.5298,
-        longitude: 3.0702,
-        altitudeFt: 32000,
+        time: 1674232000,
+        latitude: 50.5941,
+        longitude: 3.0799,
+        altitudeFt: 31000,
       },
       {
-        time: 1674233984,
-        latitude: 50.4801,
-        longitude: 3.0767,
-        altitudeFt: 32000,
+        time: 1674232500,
+        latitude: 50.601,
+        longitude: 3.0803,
+        altitudeFt: 31000,
       },
       {
-        time: 1674235722,
-        latitude: 50.4304,
-        longitude: 3.0832,
-        altitudeFt: 32000,
+        time: 1674233000,
+        latitude: 50.6078,
+        longitude: 3.0807,
+        altitudeFt: 31000,
       },
+      // {
+      //   "time": 1674231000,
+      //   "latitude": 50.3796,
+      //   "longitude": 3.0479,
+      //   "altitudeFt": 29000
+      // },
+      // {
+      //   "time": 1674232000,
+      //   "latitude": 50.4798,
+      //   "longitude": 3.0634,
+      //   "altitudeFt": 30000
+      // },
+      // {
+      //   "time": 1674233000,
+      //   "latitude": 50.5800,
+      //   "longitude": 3.0789,
+      //   "altitudeFt": 31000
+      // },
+      // {
+      //   "time": 1674234000,
+      //   "latitude": 50.6301,
+      //   "longitude": 3.0892,
+      //   "altitudeFt": 32000
+      // },
+      // {
+      //   "time": 1674235722,
+      //   "latitude": 50.6312,
+      //   "longitude": 3.0578,
+      //   "altitudeFt": 0
+      // }
     ],
   },
   {
@@ -192,76 +246,197 @@ export const routePoints = [
   {
     name: "Paris CDG (CDG) to geneve (NCE)",
     data: "42\nVRYR219Y\n360-\nXI\n➡BOKNO",
-    metadata: "42<br>VRYR219Y<br>360-<br>XI<br>➡BOKNO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
-    points: [
-      {
-        time: 1674226873,
-        latitude: 46.2074,
-        longitude: 6.146,
-        altitudeFt: 31000,
-      },
-      {
-        time: 1674230570,
-        latitude: 46.1583,
-        longitude: 6.1534,
-        altitudeFt: 31000,
-      },
-      {
-        time: 1674232223,
-        latitude: 46.1092,
-        longitude: 6.1608,
-        altitudeFt: 32000,
-      },
-      {
-        time: 1674233984,
-        latitude: 46.0601,
-        longitude: 6.1682,
-        altitudeFt: 32000,
-      },
-      {
-        time: 1674235722,
-        latitude: 46.011,
-        longitude: 6.1756,
-        altitudeFt: 32000,
-      },
-    ],
+    metadata:
+      "42<br>VRYR219Y<br>360-<br>XI<br>➡BOKNO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "points": [
+        {
+          "time": 1674226873,
+          "latitude": 48.8566,
+          "longitude": 2.3522,
+          "altitudeFt": 0
+        },
+        {
+          "time": 1674230570,
+          "latitude": 48.6551,
+          "longitude": 3.2525,
+          "altitudeFt": 10000
+        },
+        {
+          "time": 1674232223,
+          "latitude": 48.4536,
+          "longitude": 4.1528,
+          "altitudeFt": 15000
+        },
+        {
+          "time": 1674233984,
+          "latitude": 48.2521,
+          "longitude": 5.0531,
+          "altitudeFt": 20000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 48.0506,
+          "longitude": 5.9534,
+          "altitudeFt": 25000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 47.8491,
+          "longitude": 6.8537,
+          "altitudeFt": 30000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 47.6476,
+          "longitude": 7.7540,
+          "altitudeFt": 32000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 47.4461,
+          "longitude": 8.6543,
+          "altitudeFt": 34000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 47.2446,
+          "longitude": 9.5546,
+          "altitudeFt": 35000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 47.0431,
+          "longitude": 10.4549,
+          "altitudeFt": 36000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 46.8416,
+          "longitude": 11.3552,
+          "altitudeFt": 37000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 46.6401,
+          "longitude": 12.2555,
+          "altitudeFt": 38000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 46.4386,
+          "longitude": 13.1558,
+          "altitudeFt": 39000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 46.2371,
+          "longitude": 14.0561,
+          "altitudeFt": 40000
+        },
+        {
+          "time": 1674235722,
+          "latitude": 46.2044,
+          "longitude": 14.1432,
+          "altitudeFt": 0
+        }
+      ]
   },
   {
     data: "43-5\nVVLG8830\n352350\nR2",
     metadata:
       "43-5<br>VVLG8830<br>352350<br>R2<br>Z3 t350 PPN p350<br>OSMOB h..m..<br>134.765<br>V<br>@h221@k260 @m.77@36",
     name: "Paris CDG (CDG) to Toulouse (TLS)",
-    points: [
+    "points": [
       {
-        time: 1674226873,
-        latitude: 43.6045,
-        longitude: 1.444,
-        altitudeFt: 31000,
+        "time": 1674226873,
+        "latitude": 48.8566,
+        "longitude": 2.3522,
+        "altitudeFt": 0
       },
       {
-        time: 1674230570,
-        latitude: 43.5535,
-        longitude: 1.4505,
-        altitudeFt: 31000,
+        "time": 1674228000,
+        "latitude": 46.6501,
+        "longitude": 2.6235,
+        "altitudeFt": 10000
       },
       {
-        time: 1674232223,
-        latitude: 43.5025,
-        longitude: 1.457,
-        altitudeFt: 32000,
+        "time": 1674229000,
+        "latitude": 45.4435,
+        "longitude": 3.0869,
+        "altitudeFt": 20000
       },
       {
-        time: 1674233984,
-        latitude: 43.4515,
-        longitude: 1.4635,
-        altitudeFt: 32000,
+        "time": 1674230000,
+        "latitude": 44.2369,
+        "longitude": 3.5502,
+        "altitudeFt": 25000
       },
       {
-        time: 1674235722,
-        latitude: 43.4005,
-        longitude: 1.47,
-        altitudeFt: 32000,
+        "time": 1674231000,
+        "latitude": 43.0303,
+        "longitude": 4.0136,
+        "altitudeFt": 27000
       },
-    ],
+      {
+        "time": 1674232000,
+        "latitude": 41.8237,
+        "longitude": 4.4770,
+        "altitudeFt": 29000
+      },
+      {
+        "time": 1674233000,
+        "latitude": 40.6171,
+        "longitude": 4.9403,
+        "altitudeFt": 30000
+      },
+      {
+        "time": 1674234000,
+        "latitude": 39.4105,
+        "longitude": 5.4037,
+        "altitudeFt": 31000
+      },
+      {
+        "time": 1674235000,
+        "latitude": 38.2039,
+        "longitude": 5.8670,
+        "altitudeFt": 32000
+      },
+      {
+        "time": 1674236000,
+        "latitude": 37.0000,
+        "longitude": 6.3300,
+        "altitudeFt": 33000
+      },
+      {
+        "time": 1674237000,
+        "latitude": 36.9000,
+        "longitude": 6.3400,
+        "altitudeFt": 34000
+      },
+      {
+        "time": 1674238000,
+        "latitude": 36.8000,
+        "longitude": 6.3500,
+        "altitudeFt": 35000
+      },
+      {
+        "time": 1674239000,
+        "latitude": 36.7000,
+        "longitude": 6.3600,
+        "altitudeFt": 36000
+      },
+      {
+        "time": 1674240000,
+        "latitude": 36.6000,
+        "longitude": 6.3700,
+        "altitudeFt": 37000
+      },
+      {
+        "time": 1674241000,
+        "latitude": 36.5000,
+        "longitude": 6.3800,
+        "altitudeFt": 38000
+      }
+    ]
   },
 ];

@@ -27,7 +27,19 @@ function App() {
       zoom: 10,
       projection: "mercator",
     });
+
     map.on("load", () => {
+      // remove countries and cities names
+      let show = false;
+      map.style.stylesheet.layers.forEach(function (layer) {
+        if (layer.type === "symbol") {
+          map.setLayoutProperty(
+            layer.id,
+            "visibility",
+            show ? "visible" : "none"
+          );
+        }
+      });
       const bounds = [
         [-6.494917884024034, 51.69935897822677], // Coin Sud-Ouest
         [9.732690059356145, 41.25166002712723], // Coin Nord-Est
@@ -41,10 +53,11 @@ function App() {
     <div className="wrapper">
       <div id="map">
         {map ? (
-          <>routePoints
+          <>
+            routePoints
             {routePoints.map((route) => (
               <React.Fragment key={uuidv4()}>
-                <Route routePoints={route.points} map={map} id={uuidv4()} />
+                <Route routePoints={route.points.slice(-5)} map={map} id={uuidv4()} />
                 <Airplane
                   routePoints={route}
                   map={map}
@@ -53,7 +66,6 @@ function App() {
                 />
               </React.Fragment>
             ))}
-
             <div
               style={{
                 position: "absolute",

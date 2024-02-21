@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const Route = ({ map, routePoints, id }) => {
+export const AllRoute = ({ map, routePoints, id }) => {
   const ROUTE_POINTS_SOURCE_ID = `ROUTE_POINTS_SOURCE_ID_${id}`;
   const ROUTE_POINTS_LAYER_ID = `ROUTE_POINTS_LAYER_ID_${id}`;
   const ROUTE_LINE_SOURCE_ID = `ROUTE_LINE_SOURCE_ID_${id}`;
@@ -23,6 +23,7 @@ export const Route = ({ map, routePoints, id }) => {
       layout: { "line-join": "round", "line-cap": "round" },
       paint: { "line-color": "#197adc", "line-width": 2 },
     });
+
     map.addLayer({
       id: ROUTE_POINTS_LAYER_ID,
       type: "circle",
@@ -31,7 +32,7 @@ export const Route = ({ map, routePoints, id }) => {
         // Make circles larger as the user zooms from z12 to z22.
         "circle-radius": 3,
         // Color circles by ethnicity, using a `match` expression.
-        "circle-color": "white",
+        "circle-color": "#197adc",
       },
     });
 
@@ -67,7 +68,18 @@ export const Route = ({ map, routePoints, id }) => {
         },
       })),
     });
-
+    map.getSource(ROUTE_LINE_SOURCE_ID).setData({
+      type: "FeatureCollection",
+      features: [
+        {
+          type: "Feature",
+          geometry: {
+            type: "LineString",
+            coordinates: routePoints.map((rp) => [rp.longitude, rp.latitude]),
+          },
+        },
+      ],
+    });
   }, [
     ROUTE_LINE_SOURCE_ID,
     ROUTE_POINTS_LAYER_ID,
