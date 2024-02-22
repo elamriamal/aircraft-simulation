@@ -7,6 +7,7 @@ import "../assets/styles.css";
 import { v4 as uuidv4 } from "uuid";
 import { AllRoute } from "./AllRoute";
 import * as turf from "@turf/turf";
+import FlightTracker from "./FlightTracker";
 
 export const Airplane = ({ map, routePoints, timestamp, id }) => {
   const AIRPLANE_SOURCE_ID = `AIRPLANE_SOURCE_ID_${id}`;
@@ -19,6 +20,14 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
     row: "display: flex; flex-direction: row;",
   };
   const [showRoute, setShowRoute] = useState(false);
+  const [startLatitude, setStartLatitude] = useState(
+    routePoints.points[0].latitude
+  );
+  const [startLongitude, setStartLongitude] = useState(
+    routePoints.points[0].longitude
+  );
+  const [currentLatitude, setCurrentLatitude] = useState(null);
+  const [currentLongitude, setCurrentLongitude] = useState(null);
 
   useEffect(() => {
     // airplane
@@ -99,12 +108,14 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
     TEXT_SOURCE_ID,
     map,
   ]);
-
   useEffect(() => {
     const positionFeature = getFlightPositionAtTimestamp(
       routePoints.points,
       timestamp
     );
+    setCurrentLatitude(positionFeature?.geometry?.coordinates?.[1]);
+    setCurrentLongitude(positionFeature?.geometry?.coordinates?.[0]);
+
     if (positionFeature?.properties && routePoints?.metadata) {
       positionFeature.properties.metadata = routePoints.metadata;
     }
@@ -119,29 +130,12 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
         features: positionFeature ? [positionFeature] : [],
       });
     }
-
-    function calculateTextCoordinates() {
-      const zoom = map.getZoom();
-      const offsetMeters = 300 * Math.pow(2, 12 - zoom); // offset based on zoom level
-
-      const textCoordinates = turf.destination(
-        [
-          positionFeature.geometry.coordinates[0],
-          positionFeature.geometry.coordinates[1],
-        ],
-        offsetMeters,
-        120, // Angle
-        { units: "meters" }
-      ).geometry.coordinates;
-
-      return textCoordinates;
-    }
     // Check if positionFeature is defined and has a geometry property before accessing it
     if (positionFeature && positionFeature.geometry) {
       const airplaneCoordinates = positionFeature.geometry.coordinates;
 
       // Calculate textCoordinates
-      const textCoordinates = calculateTextCoordinates();
+      const textCoordinates = calculateTextCoordinates(positionFeature);
 
       // Add a layer for the line representing the route
       map.addLayer({
@@ -167,19 +161,14 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
         },
         paint: {
           "line-color": "white",
-          "line-width": {
-            base: 1,
-            stops: [
-              [10, 1],
-              [18, 4],
-            ],
-          },
+          "line-width": 1,
         },
       });
 
       // Update the line whenever the map zoom changes
       map.on("zoom", function () {
-        const updatedTextCoordinates = calculateTextCoordinates();
+        const updatedTextCoordinates =
+          calculateTextCoordinates(positionFeature);
 
         // Update the line source with the new text coordinates
         map.getSource(LINE_LAYER_ID).setData({
@@ -240,7 +229,6 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
     styles.textSize,
     timestamp,
   ]);
-
   let fHover = null;
   function mouseover(feature) {
     fHover = feature;
@@ -270,10 +258,37 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
     );
     fHover = null;
   }
+  function calculateTextCoordinates(positionFeature) {
+    const zoom = map.getZoom();
+    const offsetMeters = 300 * Math.pow(2, 12 - zoom); // offset based on zoom level
 
+    const textCoordinates = turf.destination(
+      [
+        positionFeature.geometry.coordinates[0],
+        positionFeature.geometry.coordinates[1],
+      ],
+      offsetMeters,
+      130, // Angle
+      { units: "meters" }
+    ).geometry.coordinates;
+
+    return textCoordinates;
+  }
   return (
-    showRoute && (
-      <AllRoute routePoints={routePoints.points} map={map} id={uuidv4()} />
-    )
+    <>
+      {currentLatitude && currentLongitude && (
+        <FlightTracker
+          startLatitude={startLatitude}
+          startLongitude={startLongitude}
+          currentLatitude={currentLatitude}
+          currentLongitude={currentLongitude}
+          map={map}
+          id={id}
+        />
+      )}
+      {showRoute && (
+        <AllRoute routePoints={routePoints.points} map={map} id={uuidv4()} />
+      )}
+    </>
   );
 };

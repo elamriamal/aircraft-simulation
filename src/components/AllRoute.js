@@ -1,16 +1,11 @@
 import { useEffect } from "react";
+import * as turf from "@turf/turf";
 
 export const AllRoute = ({ map, routePoints, id }) => {
-  const ROUTE_POINTS_SOURCE_ID = `ROUTE_POINTS_SOURCE_ID_${id}`;
-  const ROUTE_POINTS_LAYER_ID = `ROUTE_POINTS_LAYER_ID_${id}`;
   const ROUTE_LINE_SOURCE_ID = `ROUTE_LINE_SOURCE_ID_${id}`;
   const ROUTE_LINE_LAYER_ID = `ROUTE_LINE_LAYER_ID_${id}`;
   useEffect(() => {
-    map.addSource(ROUTE_POINTS_SOURCE_ID, {
-      type: "geojson",
-      data: [],
-    });
-
+    var greatCircle = turf.greatCircle([routePoints[0].longitude, routePoints[0].latitude], [routePoints[1].longitude, routePoints[1].latitude], { steps: 100 });
     map.addSource(ROUTE_LINE_SOURCE_ID, {
       type: "geojson",
       data: [],
@@ -19,74 +14,19 @@ export const AllRoute = ({ map, routePoints, id }) => {
     map.addLayer({
       id: ROUTE_LINE_LAYER_ID,
       type: "line",
-      source: ROUTE_LINE_SOURCE_ID,
+      source: {
+        type: 'geojson',
+        data: greatCircle
+    },
       layout: { "line-join": "round", "line-cap": "round" },
       paint: { "line-color": "#197adc", "line-width": 2 },
     });
 
-    map.addLayer({
-      id: ROUTE_POINTS_LAYER_ID,
-      type: "circle",
-      source: ROUTE_POINTS_SOURCE_ID,
-      paint: {
-        // Make circles larger as the user zooms from z12 to z22.
-        "circle-radius": 3,
-        // Color circles by ethnicity, using a `match` expression.
-        "circle-color": "#197adc",
-      },
-    });
-
     return () => {
-      map.removeLayer(ROUTE_POINTS_LAYER_ID);
-      map.removeSource(ROUTE_POINTS_SOURCE_ID);
       map.removeLayer(ROUTE_LINE_LAYER_ID);
       map.removeSource(ROUTE_LINE_SOURCE_ID);
     };
-  }, [
-    ROUTE_LINE_LAYER_ID,
-    ROUTE_LINE_SOURCE_ID,
-    ROUTE_POINTS_LAYER_ID,
-    ROUTE_POINTS_SOURCE_ID,
-    map,
-  ]);
-
-  useEffect(() => {
-    map.getSource(ROUTE_POINTS_SOURCE_ID).setData({
-      type: "FeatureCollection",
-      features: routePoints.map((rp) => ({
-        type: "Feature",
-        properties: {
-          description: `<div style="color: black"><strong> ${rp.name}</strong>
-          <p>Latitude ${rp.latitude}</p>
-          <p>Longitude ${rp.longitude}</p>
-          <p>Altitude ${rp.altitudeFt} ft</p>
-          </div>`,
-        },
-        geometry: {
-          type: "Point",
-          coordinates: [rp.longitude, rp.latitude],
-        },
-      })),
-    });
-    map.getSource(ROUTE_LINE_SOURCE_ID).setData({
-      type: "FeatureCollection",
-      features: [
-        {
-          type: "Feature",
-          geometry: {
-            type: "LineString",
-            coordinates: routePoints.map((rp) => [rp.longitude, rp.latitude]),
-          },
-        },
-      ],
-    });
-  }, [
-    ROUTE_LINE_SOURCE_ID,
-    ROUTE_POINTS_LAYER_ID,
-    ROUTE_POINTS_SOURCE_ID,
-    map,
-    routePoints,
-  ]);
+  }, [ROUTE_LINE_LAYER_ID, ROUTE_LINE_SOURCE_ID, map, routePoints]);
 
   return null;
 };

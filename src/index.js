@@ -4,7 +4,6 @@ import * as ReactDOM from "react-dom/client";
 import mapboxgl from "mapbox-gl";
 import "./assets/styles.css";
 import { routePoints } from "./data/route";
-import { Route } from "./components/Route";
 import { Airplane } from "./components/Airplane";
 import { TimelineSlider } from "./components/TimelineSlider";
 import { v4 as uuidv4 } from "uuid";
@@ -57,7 +56,6 @@ function App() {
             routePoints
             {routePoints.map((route) => (
               <React.Fragment key={uuidv4()}>
-                <Route routePoints={route.points.slice(-5)} map={map} id={uuidv4()} />
                 <Airplane
                   routePoints={route}
                   map={map}
