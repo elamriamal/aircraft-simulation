@@ -8,12 +8,18 @@ export const Route = ({ map, routePoints, id }) => {
   useEffect(() => {
     map.addSource(ROUTE_POINTS_SOURCE_ID, {
       type: "geojson",
-      data: [],
+      data: {
+        type: "FeatureCollection",
+        features: [],
+      },
     });
 
     map.addSource(ROUTE_LINE_SOURCE_ID, {
       type: "geojson",
-      data: [],
+      data: {
+        type: "FeatureCollection",
+        features: [],
+      },
     });
 
     map.addLayer({

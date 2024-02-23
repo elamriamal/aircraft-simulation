@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as ReactDOM from "react-dom/client";
+import aircraftIcon from "./assets/square-modified.png";
 
 import mapboxgl from "mapbox-gl";
 import "./assets/styles.css";
@@ -21,13 +22,17 @@ function App() {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map",
-      style: "mapbox://styles/mapbox/dark-v10",
+      style: "mapbox://styles/mapbox/dark-v10?optimize=true",
       center: [-6.494917884024034, 51.69935897822677],
       zoom: 10,
       projection: "mercator",
     });
 
     map.on("load", () => {
+      map.loadImage(aircraftIcon, (error, image) => {
+        if (error) throw error;
+        map.addImage("square", image);
+      });
       // remove countries and cities names
       let show = false;
       map.style.stylesheet.layers.forEach(function (layer) {

@@ -43,14 +43,15 @@ const FlightTracker = ({
   useEffect(() => {
     map.addSource(LAST_POINTS_SOURCE_ID, {
       type: "geojson",
-      generateId: true,
-      data: [],
+      data: {
+        type: "FeatureCollection",
+        features: [],
+      },
     });
 
     map.addLayer({
       id: LAST_POINTS_LAYER_ID,
       type: "circle",
-      generateId: true,
       source: LAST_POINTS_SOURCE_ID,
       paint: {
         "circle-radius": 3,

@@ -1,8 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { getFlightPositionAtTimestamp } from "../utils/getFlightPositionAtTimestamp";
 import mapboxgl from "mapbox-gl";
-import aircraftIcon from "../assets/square-modified.png";
 import "../assets/styles.css";
 import { v4 as uuidv4 } from "uuid";
 import { AllRoute } from "./AllRoute";
@@ -16,39 +14,29 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
   const TEXT_LAYER_ID = `TEXT_LAYER_ID_${id}`;
   const LINE_SOURCE_ID = `LINE_SOURCE_ID_${id}`;
   const LINE_LAYER_ID = `LINE_LAYER_ID_${id}`;
-  const styles = {
-    row: "display: flex; flex-direction: row;",
-  };
+
   const [showRoute, setShowRoute] = useState(false);
-  const [startLatitude, setStartLatitude] = useState(
-    routePoints.points[0].latitude
-  );
-  const [startLongitude, setStartLongitude] = useState(
-    routePoints.points[0].longitude
-  );
+  const [startLatitude] = useState(routePoints.points[0].latitude);
+  const [startLongitude] = useState(routePoints.points[0].longitude);
   const [currentLatitude, setCurrentLatitude] = useState(null);
   const [currentLongitude, setCurrentLongitude] = useState(null);
 
   useEffect(() => {
-    // airplane
     map.addSource(AIRPLANE_SOURCE_ID, {
       type: "geojson",
-      generateId: true,
-      data: [],
+      data: {
+        type: "FeatureCollection",
+        features: [],
+      },
     });
-    map.loadImage(aircraftIcon, (error, image) => {
-      if (error) throw error;
-      // Add the image to the map style.
-      map.addImage("square", image);
-    });
+
     map.addLayer({
       id: AIRPLANE_LAYER_ID,
       type: "symbol",
-      generateId: true,
       source: AIRPLANE_SOURCE_ID,
       layout: {
         "icon-image": "square",
-        "icon-size": 0.06,
+        "icon-size": 0.09,
         "icon-allow-overlap": true,
       },
       paint: {
@@ -63,14 +51,15 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
     // text
     map.addSource(TEXT_SOURCE_ID, {
       type: "geojson",
-      generateId: true,
-      data: [],
+      data: {
+        type: "FeatureCollection",
+        features: [],
+      },
     });
 
     map.addLayer({
       id: TEXT_LAYER_ID,
       type: "symbol",
-      generateId: true,
       source: TEXT_SOURCE_ID,
       layout: {
         "text-field": ["get", "data"],
@@ -85,10 +74,15 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
       },
     });
 
-    // Ajoutez une source de données GeoJSON qui contient une seule entité géométrique.
     map.addSource(LINE_SOURCE_ID, {
       type: "geojson",
-      data: [],
+      data: {
+        type: "Feature",
+        geometry: {
+          type: "LineString",
+          coordinates: [],
+        },
+      },
     });
 
     return () => {
@@ -96,18 +90,23 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
       map.removeSource(AIRPLANE_SOURCE_ID);
       map.removeLayer(TEXT_LAYER_ID);
       map.removeSource(TEXT_SOURCE_ID);
-      map.removeLayer(LINE_LAYER_ID);
-      map.removeSource(LINE_SOURCE_ID);
+      if (map.getLayer(LINE_LAYER_ID)) {
+        map.removeLayer(LINE_LAYER_ID);
+      }
+      if (map.getSource(LINE_SOURCE_ID)) {
+        map.removeSource(LINE_SOURCE_ID);
+      }
     };
   }, [
     AIRPLANE_LAYER_ID,
     AIRPLANE_SOURCE_ID,
-    LINE_SOURCE_ID,
     LINE_LAYER_ID,
+    LINE_SOURCE_ID,
     TEXT_LAYER_ID,
     TEXT_SOURCE_ID,
     map,
   ]);
+
   useEffect(() => {
     const positionFeature = getFlightPositionAtTimestamp(
       routePoints.points,
@@ -116,27 +115,35 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
     setCurrentLatitude(positionFeature?.geometry?.coordinates?.[1]);
     setCurrentLongitude(positionFeature?.geometry?.coordinates?.[0]);
 
-    if (positionFeature?.properties && routePoints?.metadata) {
-      positionFeature.properties.metadata = routePoints.metadata;
-    }
-    map.getSource(AIRPLANE_SOURCE_ID).setData({
-      type: "FeatureCollection",
-      features: positionFeature ? [positionFeature] : [],
-    });
-    if (positionFeature?.properties && routePoints?.data) {
-      positionFeature.properties.data = routePoints.data;
-      map.getSource(TEXT_SOURCE_ID).setData({
+    if (positionFeature) {
+      const newData = [
+        {
+          ...positionFeature,
+          properties: {
+            ...positionFeature.properties,
+            metadata: routePoints.metadata,
+            data: routePoints.data,
+          },
+        },
+      ];
+
+      map.getSource(AIRPLANE_SOURCE_ID).setData({
         type: "FeatureCollection",
-        features: positionFeature ? [positionFeature] : [],
+        features: newData,
       });
-    }
-    // Check if positionFeature is defined and has a geometry property before accessing it
-    if (positionFeature && positionFeature.geometry) {
+      if (positionFeature?.properties && routePoints?.data) {
+        positionFeature.properties.data = routePoints.data;
+        map.getSource(TEXT_SOURCE_ID).setData({
+          type: "FeatureCollection",
+          features: positionFeature ? [positionFeature] : [],
+        });
+      }
       const airplaneCoordinates = positionFeature.geometry.coordinates;
-
-      // Calculate textCoordinates
       const textCoordinates = calculateTextCoordinates(positionFeature);
-
+      const lineCoordinates = [
+        [airplaneCoordinates[0], airplaneCoordinates[1]],
+        textCoordinates,
+      ];
       // Add a layer for the line representing the route
       map.addLayer({
         id: LINE_LAYER_ID,
@@ -148,10 +155,7 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
             type: "Feature",
             geometry: {
               type: "LineString",
-              coordinates: [
-                [airplaneCoordinates[0], airplaneCoordinates[1]],
-                textCoordinates,
-              ],
+              coordinates: lineCoordinates,
             },
           },
         },
@@ -164,7 +168,13 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
           "line-width": 1,
         },
       });
-
+      map.getSource(LINE_SOURCE_ID).setData({
+        type: "Feature",
+        geometry: {
+          type: "LineString",
+          coordinates: lineCoordinates,
+        },
+      });
       // Update the line whenever the map zoom changes
       map.on("zoom", function () {
         const updatedTextCoordinates =
@@ -183,85 +193,45 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
         });
       });
     }
+  }, [AIRPLANE_SOURCE_ID, LINE_LAYER_ID, LINE_SOURCE_ID, TEXT_SOURCE_ID, map, routePoints, timestamp]);
 
-    // When a click event occurs on a feature in the points layer, open a popup at the
-    // losquareion of the feature, with bearing HTML from its properties.
-    var popin = new mapboxgl.Popup({
-      className: `${styles.mapboxglPopupContent}`,
-    });
-    map.on("mousemove", AIRPLANE_LAYER_ID, (e) => {
-      // Copy coordinates array.
-      const coordinates = e.features[0].geometry.coordinates.slice();
-      const bearing = e.features[0].properties.bearing;
-      const metadata = e.features[0].properties.metadata;
-      if (e.features[0]) {
-        mouseover(e.features[0]);
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-        if (bearing && coordinates) {
+  useEffect(() => {
+    const popin = new mapboxgl.Popup();
+
+    const mousemoveHandler = (e) => {
+      const feature = e.features[0];
+      if (!feature) return;
+
+      const coordinates = feature.geometry.coordinates.slice();
+      const bearing = feature.properties.bearing;
+      const metadata = feature.properties.metadata;
+
+      if (bearing && coordinates) {
+        if (metadata) {
           popin.setLngLat(coordinates).setHTML(metadata).addTo(map);
-          setShowRoute(true);
         }
-      } else {
-        mouseout();
-        popin.remove();
-        setShowRoute(false);
+        setShowRoute(true);
       }
-    });
+    };
 
-    map.on("mouseout", AIRPLANE_LAYER_ID, function (e) {
-      mouseout();
+    const mouseoutHandler = () => {
       popin.remove();
       setShowRoute(false);
-    });
-  }, [
-    AIRPLANE_LAYER_ID,
-    AIRPLANE_SOURCE_ID,
-    LINE_SOURCE_ID,
-    LINE_LAYER_ID,
-    TEXT_SOURCE_ID,
-    TEXT_LAYER_ID,
-    map,
-    routePoints,
-    styles.column,
-    styles.row,
-    styles.textSize,
-    timestamp,
-  ]);
-  let fHover = null;
-  function mouseover(feature) {
-    fHover = feature;
-    map.getCanvasContainer().style.cursor = "pointer";
-    map.setFeatureState(
-      {
-        source: AIRPLANE_SOURCE_ID,
-        id: fHover.id,
-      },
-      {
-        hover: true,
-      }
-    );
-  }
+    };
 
-  function mouseout() {
-    if (!fHover) return;
-    map.getCanvasContainer().style.cursor = "default";
-    map.setFeatureState(
-      {
-        source: AIRPLANE_SOURCE_ID,
-        id: fHover.id,
-      },
-      {
-        hover: false,
-      }
-    );
-    fHover = null;
-  }
+    map.on("mousemove", AIRPLANE_LAYER_ID, mousemoveHandler);
+    map.on("mouseout", AIRPLANE_LAYER_ID, mouseoutHandler);
+
+    return () => {
+      map.off("mousemove", AIRPLANE_LAYER_ID, mousemoveHandler);
+      map.off("mouseout", AIRPLANE_LAYER_ID, mouseoutHandler);
+      popin.remove();
+    };
+  }, [AIRPLANE_LAYER_ID, map]);
+
   function calculateTextCoordinates(positionFeature) {
     const zoom = map.getZoom();
-    const offsetMeters = 300 * Math.pow(2, 12 - zoom); // offset based on zoom level
-
+    const offsetMeters = 300 * Math.pow(2, 12 - zoom);
     const textCoordinates = turf.destination(
       [
         positionFeature.geometry.coordinates[0],
@@ -274,6 +244,7 @@ export const Airplane = ({ map, routePoints, timestamp, id }) => {
 
     return textCoordinates;
   }
+
   return (
     <>
       {currentLatitude && currentLongitude && (
