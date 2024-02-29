@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import mapboxgl from "mapbox-gl";
 import "./assets/styles.css";
 import { routePoints } from "./data/route";
-import Airplane from "./components/Airplane";
+import Flight from "./components/Flight";
 import { TimelineSlider } from "./components/TimelineSlider";
 import { v4 as uuidv4 } from "uuid";
 import aircraftIcon from "./assets/square-modified.png";
@@ -20,7 +20,7 @@ export const NOW_TIMESTAMP = 1674227811; // Friday, 20 January 2023 14:43:31;
 function App() {
   const [map, setMap] = useState(null);
   const [timestamp, setTimestamp] = useState(NOW_TIMESTAMP);
-  const [airplanes, setAirplanes] = useState([]);
+  const [flights, setFlights] = useState([]);
 
   const debouncedSetTimestamp = useCallback(
     _debounce((value) => setTimestamp(value), 20),
@@ -69,27 +69,27 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const initialAirplanes = routePoints.map((route) => ({
+    const initialFlights = routePoints.map((route) => ({
       routePoints: route,
       timestamp: NOW_TIMESTAMP,
       id: uuidv4(),
     }));
 
-    setAirplanes(initialAirplanes);
+    setFlights(initialFlights);
   }, []);
-  const isAirplaneVisible = useCallback(
-    (airplane) =>
-      airplane.timestamp >= MIN_TIMESTAMP &&
-      airplane.timestamp <= MAX_TIMESTAMP,
+  const isFlightVisible = useCallback(
+    (flight) =>
+      flight.timestamp >= MIN_TIMESTAMP &&
+      flight.timestamp <= MAX_TIMESTAMP,
     []
   );
   useEffect(() => {
-    setAirplanes((prevAirplanes) =>
-      prevAirplanes.map((airplane) =>
-        isAirplaneVisible(airplane) ? { ...airplane, timestamp } : airplane
+    setFlights((prevFlights) =>
+      prevFlights.map((flight) =>
+        isFlightVisible(flight) ? { ...flight, timestamp } : flight
       )
     );
-  }, [timestamp, isAirplaneVisible]);
+  }, [timestamp, isFlightVisible]);
 
   const handleChange = useCallback(
     (value) => debouncedSetTimestamp(parseInt(value)),
@@ -101,13 +101,13 @@ function App() {
       <div id="map">
         {map ? (
           <>
-            {airplanes.map((airplane) => (
-              <Airplane
-                key={airplane.id}
-                routePoints={airplane.routePoints}
+            {flights.map((flight) => (
+              <Flight
+                key={flight.id}
+                routePoints={flight.routePoints}
                 map={map}
-                timestamp={airplane.timestamp}
-                id={airplane.id}
+                timestamp={flight.timestamp}
+                id={flight.id}
               />
             ))}
             <div

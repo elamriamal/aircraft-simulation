@@ -5,9 +5,9 @@ import "../assets/styles.css";
 import { v4 as uuidv4 } from "uuid";
 // import * as turf from "@turf/turf";
 import FlightTracker from "./FlightTracker";
-import { AllRoute } from "./AllRoute";
+import { DrawAllRoute } from "./DrawAllRoute";
 
-const Airplane = ({ map, routePoints, timestamp, id }) => {
+const Flight = ({ map, routePoints, timestamp, id }) => {
   const AIRPLANE_SOURCE_ID = useMemo(() => `AIRPLANE_SOURCE_ID_${id}`, [id]);
   const AIRPLANE_LAYER_ID = useMemo(() => `AIRPLANE_LAYER_ID_${id}`, [id]);
   const TEXT_SOURCE_ID = useMemo(() => `TEXT_SOURCE_ID_${id}`, [id]);
@@ -188,7 +188,7 @@ const Airplane = ({ map, routePoints, timestamp, id }) => {
     }
 
     // if (positionFeature && positionFeature.geometry) {
-      // const airplaneCoordinates = positionFeature.geometry.coordinates;
+      // const flightCoordinates = positionFeature.geometry.coordinates;
       // const textCoordinates = calculateTextCoordinates(positionFeature);
 
       // updateSourceData(LINE_SOURCE_ID, {
@@ -196,7 +196,7 @@ const Airplane = ({ map, routePoints, timestamp, id }) => {
       //   geometry: {
       //     type: "LineString",
       //     coordinates: [
-      //       [airplaneCoordinates[0], airplaneCoordinates[1]],
+      //       [flightCoordinates[0], flightCoordinates[1]],
       //       textCoordinates,
       //     ],
       //   },
@@ -210,7 +210,7 @@ const Airplane = ({ map, routePoints, timestamp, id }) => {
       //     geometry: {
       //       type: "LineString",
       //       coordinates: [
-      //         [airplaneCoordinates[0], airplaneCoordinates[1]],
+      //         [flightCoordinates[0], flightCoordinates[1]],
       //         updatedTextCoordinates,
       //       ],
       //     },
@@ -326,10 +326,10 @@ const Airplane = ({ map, routePoints, timestamp, id }) => {
         />
       )}
       {showRoute && (
-        <AllRoute routePoints={routePoints.points} map={map} id={uuidv4()} />
+        <DrawAllRoute routePoints={routePoints.points} map={map} id={uuidv4()} />
       )}
     </>
   );
 };
 
-export default React.memo(Airplane);
+export default React.memo(Flight);

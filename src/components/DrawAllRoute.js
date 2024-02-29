@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import * as turf from "@turf/turf";
 
-export const AllRoute = ({ map, routePoints, id }) => {
+export const DrawAllRoute = ({ map, routePoints, id }) => {
   const ROUTE_LINE_SOURCE_ID = `ROUTE_LINE_SOURCE_ID_${id}`;
   const ROUTE_LINE_LAYER_ID = `ROUTE_LINE_LAYER_ID_${id}`;
   useEffect(() => {
