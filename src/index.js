@@ -1,73 +1,114 @@
-import React, { useEffect, useState } from "react";
-import * as ReactDOM from "react-dom/client";
-import aircraftIcon from "./assets/square-modified.png";
-
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState, useCallback } from "react";
+import { createRoot } from "react-dom/client";
 import mapboxgl from "mapbox-gl";
 import "./assets/styles.css";
 import { routePoints } from "./data/route";
-import { Airplane } from "./components/Airplane";
+import Airplane from "./components/Airplane";
 import { TimelineSlider } from "./components/TimelineSlider";
 import { v4 as uuidv4 } from "uuid";
+import aircraftIcon from "./assets/square-modified.png";
+import _debounce from "lodash.debounce";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibmVsbGl0IiwiYSI6ImNrb3dncHdnOTA1emQybnBkZ3N1MjhzYW8ifQ.uqKPevtCLOPOjX88-7ZK9w";
 
 export const MAX_TIMESTAMP = 1674249811; // Friday, 20 January 2023 21:23:31
 export const MIN_TIMESTAMP = 1674221811; // Friday, 20 January 2023 13:36:51
-export const NOW_TIMESTAMP = 1674225811; // Friday, 20 January 2023 14:43:31
+export const NOW_TIMESTAMP = 1674227811; // Friday, 20 January 2023 14:43:31;
 
 function App() {
-  const [map, setMap] = useState();
+  const [map, setMap] = useState(null);
   const [timestamp, setTimestamp] = useState(NOW_TIMESTAMP);
-  useEffect(() => {
-    const map = new mapboxgl.Map({
-      container: "map",
-      style: "mapbox://styles/mapbox/dark-v10?optimize=true",
-      center: [-6.494917884024034, 51.69935897822677],
-      zoom: 10,
-      projection: "mercator",
-    });
+  const [airplanes, setAirplanes] = useState([]);
 
-    map.on("load", () => {
-      map.loadImage(aircraftIcon, (error, image) => {
-        if (error) throw error;
+  const debouncedSetTimestamp = useCallback(
+    _debounce((value) => setTimestamp(value), 20),
+    []
+  );
+
+  useEffect(() => {
+    const loadMap = async () => {
+      try {
+        const map = new mapboxgl.Map({
+          container: "map",
+          style: "mapbox://styles/mapbox/dark-v10?optimize=true",
+          center: [1.888334, 46.603354], // Coordonnées du centre de la France
+          zoom: 4,
+        });
+
+        const [image] = await Promise.all([
+          new Promise((resolve, reject) => {
+            map.loadImage(aircraftIcon, (error, img) => {
+              if (error) reject(error);
+              else resolve(img);
+            });
+          }),
+        ]);
+
         map.addImage("square", image);
-      });
-      // remove countries and cities names
-      let show = false;
-      map.style.stylesheet.layers.forEach(function (layer) {
-        if (layer.type === "symbol") {
-          map.setLayoutProperty(
-            layer.id,
-            "visibility",
-            show ? "visible" : "none"
-          );
-        }
-      });
-      const bounds = [
-        [-6.494917884024034, 51.69935897822677], // Coin Sud-Ouest
-        [9.732690059356145, 41.25166002712723], // Coin Nord-Est
-      ];
-      map.fitBounds(bounds);
-      map.setLayoutProperty("country-label", "text-field", ["get", `name_fr`]);
-      setMap(map);
-    });
+
+        // Hide the names of cities
+        let show = false;
+        map.style.stylesheet.layers.forEach((layer) => {
+          if (layer.type === "symbol") {
+            map.setLayoutProperty(
+              layer.id,
+              "visibility",
+              show ? "visible" : "none"
+            );
+          }
+        });
+        setMap(map);
+      } catch (error) {
+        console.error("Error loading map:", error);
+      }
+    };
+
+    loadMap();
   }, []);
+
+  useEffect(() => {
+    const initialAirplanes = routePoints.map((route) => ({
+      routePoints: route,
+      timestamp: NOW_TIMESTAMP,
+      id: uuidv4(),
+    }));
+
+    setAirplanes(initialAirplanes);
+  }, []);
+  const isAirplaneVisible = useCallback(
+    (airplane) =>
+      airplane.timestamp >= MIN_TIMESTAMP &&
+      airplane.timestamp <= MAX_TIMESTAMP,
+    []
+  );
+  useEffect(() => {
+    setAirplanes((prevAirplanes) =>
+      prevAirplanes.map((airplane) =>
+        isAirplaneVisible(airplane) ? { ...airplane, timestamp } : airplane
+      )
+    );
+  }, [timestamp, isAirplaneVisible]);
+
+  const handleChange = useCallback(
+    (value) => debouncedSetTimestamp(parseInt(value)),
+    [debouncedSetTimestamp]
+  );
+
   return (
     <div className="wrapper">
       <div id="map">
         {map ? (
           <>
-            routePoints
-            {routePoints.map((route) => (
-              <React.Fragment key={uuidv4()}>
-                <Airplane
-                  routePoints={route}
-                  map={map}
-                  timestamp={timestamp}
-                  id={uuidv4()}
-                />
-              </React.Fragment>
+            {airplanes.map((airplane) => (
+              <Airplane
+                key={airplane.id}
+                routePoints={airplane.routePoints}
+                map={map}
+                timestamp={airplane.timestamp}
+                id={airplane.id}
+              />
             ))}
             <div
               style={{
@@ -91,7 +132,7 @@ function App() {
                 max={MAX_TIMESTAMP}
                 value={timestamp}
                 step={10}
-                handleChange={(e) => setTimestamp(parseInt(e.target.value))}
+                handleChange={handleChange}
               />
             </div>
           </>
@@ -103,4 +144,4 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+createRoot(document.getElementById("root")).render(<App />);

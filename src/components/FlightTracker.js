@@ -1,76 +1,55 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import * as turf from "@turf/turf";
-const FlightTracker = ({
-  startLatitude,
-  startLongitude,
-  currentLatitude,
-  currentLongitude,
-  map,
-  id,
-}) => {
-  const [positions, setPositions] = useState([]);
-  const LAST_POINTS_SOURCE_ID = `LAST_POINTS_SOURCE_ID_${id}`;
-  const LAST_POINTS_LAYER_ID = `LAST_POINTS_LAYER_ID_${id}`;
 
-  useEffect(() => {
-    const calculateFlightPath = () => {
+const FlightTracker = React.memo(
+  ({
+    startLatitude,
+    startLongitude,
+    currentLatitude,
+    currentLongitude,
+    map,
+    id,
+  }) => {
+    const [positions, setPositions] = useState([]);
+    const LAST_POINTS_SOURCE_ID = useMemo(
+      () => `LAST_POINTS_SOURCE_ID_${id}`,
+      [id]
+    );
+    const LAST_POINTS_LAYER_ID = useMemo(
+      () => `LAST_POINTS_LAYER_ID_${id}`,
+      [id]
+    );
+
+    const calculateFlightPath = useCallback(() => {
       const flightPath = turf.lineString([
         [startLongitude, startLatitude],
         [currentLongitude, currentLatitude],
       ]);
 
       const distance = turf.length(flightPath, { units: "kilometers" });
-      const numPoints = Math.ceil(distance / 2); // Number of points for 10 km intervals
-      const interval =
-        turf.length(flightPath, { units: "kilometers" }) / numPoints;
+      const numPoints = Math.ceil(distance / 5);
+      const interval = distance / numPoints;
 
-      const newPositions = [];
-
-      for (let i = 1; i <= numPoints; i++) {
-        const point = turf.along(flightPath, i * interval, {
+      const newPositions = Array.from({ length: numPoints }, (_, i) => {
+        const point = turf.along(flightPath, (i + 1) * interval, {
           units: "kilometers",
         }).geometry.coordinates;
-        newPositions.push({ latitude: point[1], longitude: point[0] });
-      }
+        return { latitude: point[1], longitude: point[0] };
+      });
 
-      // Keep only the last 5 positions
-      setPositions(newPositions.slice(-5));
-    };
+      setPositions(newPositions.slice(-6));
+    }, [
+      startLatitude,
+      startLongitude,
+      currentLatitude,
+      currentLongitude,
+      setPositions,
+    ]);
 
-    calculateFlightPath();
-  }, [startLatitude, startLongitude, currentLatitude, currentLongitude]);
+    useEffect(() => {
+      if (!map) return; // Ensure map exists
 
-  useEffect(() => {
-    map.addSource(LAST_POINTS_SOURCE_ID, {
-      type: "geojson",
-      data: {
-        type: "FeatureCollection",
-        features: [],
-      },
-    });
-
-    map.addLayer({
-      id: LAST_POINTS_LAYER_ID,
-      type: "circle",
-      source: LAST_POINTS_SOURCE_ID,
-      paint: {
-        "circle-radius": 3,
-        "circle-color": "#223b53",
-        "circle-stroke-color": "white",
-        "circle-stroke-width": 1,
-        "circle-opacity": 0.5,
-      },
-    });
-
-    return () => {
-      map.removeLayer(LAST_POINTS_LAYER_ID);
-      map.removeSource(LAST_POINTS_SOURCE_ID);
-    };
-  }, [LAST_POINTS_LAYER_ID, LAST_POINTS_SOURCE_ID, map]);
-
-  useEffect(() => {
-    if (positions.length > 0) {
-      map.getSource(LAST_POINTS_SOURCE_ID).setData({
+      const sourceData = {
         type: "FeatureCollection",
         features: positions.map((pos) => ({
           type: "Feature",
@@ -79,10 +58,40 @@ const FlightTracker = ({
             coordinates: [pos.longitude, pos.latitude],
           },
         })),
-      });
-    }
-  }, [LAST_POINTS_SOURCE_ID, map, positions, LAST_POINTS_LAYER_ID]);
-  return null;
-};
+      };
+
+      if (!map.getSource(LAST_POINTS_SOURCE_ID)) {
+        map.addSource(LAST_POINTS_SOURCE_ID, {
+          type: "geojson",
+          data: sourceData,
+        });
+        map.addLayer({
+          id: LAST_POINTS_LAYER_ID,
+          type: "circle",
+           minzoom: 5,
+          source: LAST_POINTS_SOURCE_ID,
+          paint: {
+            "circle-radius": 3,
+            "circle-color": "#223b53",
+            "circle-stroke-color": "white",
+            "circle-stroke-width": 1,
+            "circle-opacity": 0.5,
+          },
+        });
+      } else {
+        map.getSource(LAST_POINTS_SOURCE_ID).setData(sourceData);
+      }
+
+      return () => {
+        map.removeLayer(LAST_POINTS_LAYER_ID);
+        map.removeSource(LAST_POINTS_SOURCE_ID);
+      };
+    }, [LAST_POINTS_SOURCE_ID, LAST_POINTS_LAYER_ID, map, positions]);
+
+    useEffect(calculateFlightPath, [calculateFlightPath]);
+
+    return null;
+  }
+);
 
 export default FlightTracker;

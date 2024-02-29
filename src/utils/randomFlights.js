@@ -61,14 +61,112 @@ const airportCoordinates = {
   SNN: { latitude: 52.7019, longitude: -8.9247 }, // Shannon
   ORK: { latitude: 51.8413, longitude: -8.4911 }, // Cork
   BFS: { latitude: 54.6575, longitude: -6.2182 }, // Belfast
+  JFK: { latitude: 40.6413, longitude: -73.7781 },
+  LAX: { latitude: 33.9416, longitude: -118.4085 },
+  ORD: { latitude: 41.9742, longitude: -87.9073 },
+  ATL: { latitude: 33.6407, longitude: -84.4277 },
+  DFW: { latitude: 32.8998, longitude: -97.0403 },
+  DEN: { latitude: 39.8561, longitude: -104.6737 },
+  SFO: { latitude: 37.6213, longitude: -122.3790 },
+  SEA: { latitude: 47.4502, longitude: -122.3088 },
+  MIA: { latitude: 25.7959, longitude: -80.2870 },
+  MSP: { latitude: 44.8805, longitude: -93.2166 },
+  IAH: { latitude: 29.9844, longitude: -95.3414 },
+  LAS: { latitude: 36.0800, longitude: -115.1522 },
+  PHX: { latitude: 33.4342, longitude: -112.0116 },
+  BOS: { latitude: 42.3656, longitude: -71.0096 },
+  DTW: { latitude: 42.2125, longitude: -83.3534 },
+  EWR: { latitude: 40.6895, longitude: -74.1745 },
+  CLT: { latitude: 35.2140, longitude: -80.9431 },
+  MCO: { latitude: 28.4312, longitude: -81.3081 },
+  FLL: { latitude: 26.0722, longitude: -80.1447 },
+  PHL: { latitude: 39.8721, longitude: -75.2421 },
+  BWI: { latitude: 39.1774, longitude: -76.6684 },
+  IAD: { latitude: 38.9531, longitude: -77.4565 },
+  SAN: { latitude: 32.7336, longitude: -117.1904 },
+  MDW: { latitude: 41.7868, longitude: -87.7416 },
+  TPA: { latitude: 27.9756, longitude: -82.5333 },
+  DAL: { latitude: 32.8470, longitude: -96.8518 },
+  HOU: { latitude: 29.6454, longitude: -95.2789 },
+  BNA: { latitude: 36.1264, longitude: -86.6774 },
+  STL: { latitude: 38.7487, longitude: -90.3700 },
+  SLC: { latitude: 40.7856, longitude: -111.9807 },
+  MCI: { latitude: 39.2976, longitude: -94.7139 },
+  DCA: { latitude: 38.8512, longitude: -77.0402 },
+  SJC: { latitude: 37.3626, longitude: -121.9291 },
+  MSY: { latitude: 29.9934, longitude: -90.2580 },
+  RDU: { latitude: 35.8776, longitude: -78.7875 },
+  PDX: { latitude: 45.5887, longitude: -122.5975 },
+  SAT: { latitude: 29.5312, longitude: -98.4691 },
+  IND: { latitude: 39.7173, longitude: -86.2944 },
+  SMF: { latitude: 38.6953, longitude: -121.5910 },
+  PIT: { latitude: 40.4915, longitude: -80.2328 },
+  CLE: { latitude: 41.4117, longitude: -81.8494 },
+  CMH: { latitude: 39.9980, longitude: -82.8919 },
+  AUS: { latitude: 30.2025, longitude: -97.6664 },
+  HNL: { latitude: 21.3259, longitude: -157.9215 },
+  OAK: { latitude: 37.7214, longitude: -122.2208 },
+  BUR: { latitude: 34.2005, longitude: -118.3587 },
+  SNA: { latitude: 33.6762, longitude: -117.8674 },
+  MKE: { latitude: 42.9472, longitude: -87.8966 },
+  BUF: { latitude: 42.9403, longitude: -78.7322 },
+  RSW: { latitude: 26.5361, longitude: -81.7552 },
+  MSN: { latitude: 43.1399, longitude: -89.3375 },
+  BDL: { latitude: 41.9389, longitude: -72.6861 },
+  ORF: { latitude: 36.8946, longitude: -76.2010 },
+  ABQ: { latitude: 35.0402, longitude: -106.6091 },
+  JAX: { latitude: 30.4941, longitude: -81.6886 },
+  GEG: { latitude: 47.6253, longitude: -117.5361 },
+  BOI: { latitude: 43.5684, longitude: -116.2208 },
+  OMA: { latitude: 41.3030, longitude: -95.8942 },
+  TUS: { latitude: 32.1168, longitude: -110.9410 },
+  DAY: { latitude: 39.9024, longitude: -84.2194 },
+  ALB: { latitude: 42.7470, longitude: -73.8020 },
+  BHM: { latitude: 33.5629, longitude: -86.7535 },
+  RIC: { latitude: 37.5052, longitude: -77.3197 },
+  SDF: { latitude: 38.1871, longitude: -85.7395 },
+  MHT: { latitude: 42.9326, longitude: -71.4352 },
+  PBI: { latitude: 26.6832, longitude: -80.0956 },
+  ROC: { latitude: 43.1286, longitude: -77.6655 },
+  SAV: { latitude: 32.1275, longitude: -81.2021 },
+  BTV: { latitude: 44.4690, longitude: -73.1503 },
+  GRR: { latitude: 42.8802, longitude: -85.5228 },
+  HSV: { latitude: 34.6427, longitude: -86.7751 },
+  OGG: { latitude: 20.8986, longitude: -156.4305 },
+  ICT: { latitude: 37.6499, longitude: -97.4331 },
+  CHS: { latitude: 32.8987, longitude: -80.0405 },
+  PVD: { latitude: 41.7267, longitude: -71.4348 },
+  CVG: { latitude: 39.0533, longitude: -84.6615 },
+  LGB: { latitude: 33.8177, longitude: -118.1514 },
+  GSO: { latitude: 36.1000, longitude: -79.9428 },
+  AVL: { latitude: 35.4351, longitude: -82.5411 },
+  TYS: { latitude: 35.8107, longitude: -83.9940 },
+  MFE: { latitude: 26.1820, longitude: -98.2386 },
+  CRP: { latitude: 27.7747, longitude: -97.5027 },
+  ELP: { latitude: 31.7982, longitude: -106.3930 },
+  XNA: { latitude: 36.2753, longitude: -94.3068 },
+  PWM: { latitude: 43.6462, longitude: -70.3090 },
+  MYR: { latitude: 33.6827, longitude: -78.9275 },
+  GSP: { latitude: 34.8958, longitude: -82.2186 },
+  TUL: { latitude: 36.1984, longitude: -95.8880 },
+  BZN: { latitude: 45.7752, longitude: -111.1534 },
+  DSM: { latitude: 41.5330, longitude: -93.6536 },
+  LIT: { latitude: 34.7294, longitude: -92.2243 },
+  JAN: { latitude: 32.3112, longitude: -90.0753 },
+  GPT: { latitude: 30.4133, longitude: -89.0707 },
+  FAT: { latitude: 36.7762, longitude: -119.7181 },
+  BTR: { latitude: 30.5328, longitude: -91.1466 },
+  MRY: { latitude: 36.5870, longitude: -121.8429 },
+  TLH: { latitude: 30.3918, longitude: -84.3514 },
+  ANC: { latitude: 61.1743, longitude: -149.9962 }
 };
 export function getRandomFlights() {
-  // List of airports in Europe or North Africa
+  // List of airports
   const airports = Object.keys(airportCoordinates);
 
   // Function to generate a random flight duration (in seconds)
   function generateFlightDuration() {
-    return Math.floor(Math.random() * (7200 - 3600 + 1)) + 3600; // Random duration between 1 to 2 hours
+    return Math.floor(Math.random() * (7200 - 3600 + 2)) + 3600; // Random duration between 1 to 2 hours
   }
 
   // Generate JSON structures for 100 random flights
@@ -87,13 +185,13 @@ export function getRandomFlights() {
       metadata: `${randomData[i]}<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36`,
       points: [
         {
-          time: 1674226873, // Assuming a fixed starting time for all flights
+          time: 1674228873, // Assuming a fixed starting time for all flights
           latitude: airportCoordinates[origin].latitude,
           longitude: airportCoordinates[origin].longitude,
           altitudeFt: 31000,
         },
         {
-          time: 1674226873 + duration, // Final time based on the duration
+          time: 1674228873 + duration, // Final time based on the duration
           latitude: airportCoordinates[destination].latitude,
           longitude: airportCoordinates[destination].longitude,
           altitudeFt: 0,
@@ -102,7 +200,7 @@ export function getRandomFlights() {
     };
     flights.push(flight);
   }
-  // Convert flights array to JSON string with indentation for readability
+  // Convert flights array to JSON string
   return JSON.stringify(flights, null, 2);
 }
 

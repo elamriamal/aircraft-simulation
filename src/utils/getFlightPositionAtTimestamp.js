@@ -1,4 +1,4 @@
-import { along, bearing, length, lineString } from "@turf/turf";
+import { along, length, lineString } from "@turf/turf";
 
 export function getFlightPositionAtTimestamp(routePoints, timestamp) {
   if (
@@ -8,21 +8,26 @@ export function getFlightPositionAtTimestamp(routePoints, timestamp) {
     return undefined;
   }
 
-  const nextPointIndex = routePoints.findIndex((rp) => timestamp < rp.time);
+  let prevPoint, nextPoint;
+  let prevTime, nextTime;
 
-  const prevPoint = routePoints[nextPointIndex - 1];
-  const nextPoint = routePoints[nextPointIndex];
+  for (let i = 1; i < routePoints.length; i++) {
+    if (timestamp < routePoints[i].time) {
+      prevPoint = routePoints[i - 1];
+      nextPoint = routePoints[i];
+      prevTime = prevPoint.time;
+      nextTime = nextPoint.time;
+      break;
+    }
+  }
 
   const currentEdgeLineString = lineString([
     [prevPoint.longitude, prevPoint.latitude],
     [nextPoint.longitude, nextPoint.latitude],
   ]);
 
-  const percentage =
-    (timestamp - prevPoint.time) / (nextPoint.time - prevPoint.time);
-
   const distanceBetweenPrevAndNext = length(currentEdgeLineString);
-
+  const percentage = (timestamp - prevTime) / (nextTime - prevTime);
   const completedDistanceBetweenPrevAndNext =
     distanceBetweenPrevAndNext * percentage;
 
@@ -30,19 +35,8 @@ export function getFlightPositionAtTimestamp(routePoints, timestamp) {
     currentEdgeLineString,
     completedDistanceBetweenPrevAndNext
   );
-  const positionAtTimestampFeatureOffset = along(
-    currentEdgeLineString,
-    completedDistanceBetweenPrevAndNext + 0.001
-  );
 
-  const airplaneBearing = bearing(
-    positionAtTimestampFeature,
-    positionAtTimestampFeatureOffset
-  );
   return {
     ...positionAtTimestampFeature,
-    properties: {
-      bearing: airplaneBearing,
-    }
   };
 }
