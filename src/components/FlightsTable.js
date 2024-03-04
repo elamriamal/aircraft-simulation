@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Composant de tableau d'avions
-export const FlightsTable = ({ flights, onFlightClick }) => {
+export const FlightsTable = ({ flights, onFlightClick, selectedFlight  }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -20,7 +20,8 @@ export const FlightsTable = ({ flights, onFlightClick }) => {
             <table className="dark-table">
               <tbody>
                 {flights.map((flight) => (
-                  <tr key={flight.id} onClick={() => onFlightClick(flight)}>
+                  <tr key={flight.id} onClick={() => onFlightClick(flight)}
+                  style={{ backgroundColor: selectedFlight && selectedFlight.id === flight.id ? '#555' : 'transparent', cursor: 'pointer' }}>
                     <td>{flight?.routePoints?.name}</td>
                     <td
                       dangerouslySetInnerHTML={{

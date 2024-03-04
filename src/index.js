@@ -120,7 +120,7 @@ function App() {
                 id={flight.id}
               />
             ))}
-            <FlightsTable flights={flights} onFlightClick={handleFlightClick} />
+            <FlightsTable flights={flights} onFlightClick={handleFlightClick} selectedFlight={selectedFlight} />
             {selectedFlight && (
               <DrawAllRoute
                 routePoints={selectedFlight?.routePoints?.points}
