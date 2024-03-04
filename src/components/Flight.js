@@ -182,7 +182,7 @@ const Flight = ({ map, routePoints, timestamp, id }) => {
       updateSourceData(AIRPLANE_SOURCE_ID, positionFeature);
 
       if (routePoints?.data) {
-        positionFeature.properties.data = routePoints.data;
+        positionFeature.properties.data = routePoints?.data?.replace(/<br\s*\/?>/g, '\n'); // Replace <br> with \n
         updateSourceData(TEXT_SOURCE_ID, positionFeature);
       }
     }

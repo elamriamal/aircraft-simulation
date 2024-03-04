@@ -166,7 +166,7 @@ export function getRandomFlights() {
 
   // Function to generate a random flight duration (in seconds)
   function generateFlightDuration() {
-    return Math.floor(Math.random() * (7200 - 3600 + 2)) + 3600; // Random duration between 1 to 2 hours
+    return Math.floor(Math.random() * (7200 - 3600 + 1)) + 3600; // Random duration between 1 to 2 hours
   }
 
   // Generate JSON structures for 100 random flights
@@ -216,8 +216,8 @@ export function generateRandomData() {
     const word1 = generateRandomWord();
     const word2 = generateRandomWord();
 
-    // Concatenate the number and words with '\n' separator
-    const entry = `${randomNumber}\n${word1}\n${word2}`;
+    // Concatenate the number and words with '<br>' separator
+    const entry = `${randomNumber}<br>${word1}<br>${word2}`;
 
     randomData.push(entry);
   }

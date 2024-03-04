@@ -1,6 +1,6 @@
 export const routePoints = [
   {
-    name: "Paris to Madrid",
+    name: "ORY to MAD",
     data: "43\n✓VLG 18HA\n360-\nXI\n→DEVRO",
     metadata:
       "43<br>✓VLG 18HA<br>360-<br>XI<br>→DEVRO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
@@ -20,10 +20,10 @@ export const routePoints = [
     ],
   },
   {
-    name: "Paris to Lille",
+    name: "ORY to LIL",
     data: "43\nVRYR60VE\n360-\nNILANG",
     metadata:
-      "43<br>VRYR60VE<br>360-<br>NILANG<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "33<br>VRYR60VE<br>360-<br>NILANG<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -40,10 +40,10 @@ export const routePoints = [
     ],
   },
   {
-    name: "Bordeaux (BOD) to Lyon (LYS)",
+    name: "BOD to LYS",
     data: "43\nVEZY95KC\n360-\nNI RALIX\n➡TUPAR",
     metadata:
-      "43<br>VEZY95KC<br>360-<br>NI RALIX<br>➡TUPAR<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "27<br>VEZY95KC<br>360-<br>NI RALIX<br>➡TUPAR<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -60,7 +60,7 @@ export const routePoints = [
     ],
   },
   {
-    name: "Bordeaux (BOD) to Dijon",
+    name: "BOD to DIJ",
     data: "47\n✓BEL7AD\n350-\nZ3\n➜URUNA",
     metadata:
       "47<br>✓BEL7AD<br>350-<br>Z3<br>➜URUNA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
@@ -80,7 +80,7 @@ export const routePoints = [
     ],
   },
   {
-    name: "Paris CDG (CDG) to geneve (NCE)",
+    name: "CDG to GVA",
     data: "42\nVRYR219Y\n360-\nXI\n➡BOKNO",
     metadata:
       "42<br>VRYR219Y<br>360-<br>XI<br>➡BOKNO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
@@ -100,10 +100,10 @@ export const routePoints = [
     ],
   },
   {
-    data: "43-5\nVVLG8830\n352350\nR2",
+    data: "43-5<br>VVLG8830<br>352350<br>R2",
     metadata:
       "43-5<br>VVLG8830<br>352350<br>R2<br>Z3 t350 PPN p350<br>OSMOB h..m..<br>134.765<br>V<br>@h221@k260 @m.77@36",
-    name: "Paris CDG (CDG) to Toulouse (TLS)",
+    name: "CDG to TLS",
     points: [
       {
         time: 1674227873,
@@ -121,10 +121,10 @@ export const routePoints = [
   },
 
   {
-    data: "60\nVIBE3405\n350-\nZ3\n➡BTZ",
+    data: "60<br>VIBE3405<br>350-<br>Z3<br>➡BTZ",
     metadata:
       "60<br>VIBE3405<br>350-<br>Z3<br>➡BTZ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
-    name: "Helsinki Airport to Ibiza",
+    name: "HEL to IBZ",
     points: [
       {
         time: 1674228873,
@@ -142,9 +142,9 @@ export const routePoints = [
   },
   {
     name: "BUD to NCL",
-    data: "992\nXyHsQg\nQGABBIOP",
+    data: "992<br>XyHsQg<br>QGABBIOP",
     metadata:
-      "992\nXyHsQg\nQGABBIOP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "992<br>XyHsQg<br>QGABBIOP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -162,9 +162,9 @@ export const routePoints = [
   },
   {
     name: "DUB to OSL",
-    data: "277\nIrUxcFL\nGi",
+    data: "277<br>IrUxcFL<br>Gi",
     metadata:
-      "277\nIrUxcFL\nGi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "277<br>IrUxcFL<br>Gi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -182,9 +182,9 @@ export const routePoints = [
   },
   {
     name: "PRG to VIE",
-    data: "223\nfM\nHSl",
+    data: "223<br>fM<br>HSl",
     metadata:
-      "223\nfM\nHSl<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "223<br>fM<br>HSl<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -202,9 +202,9 @@ export const routePoints = [
   },
   {
     name: "LJU to LPL",
-    data: "414\nn\nSyTnAvgdXy",
+    data: "414<br>n<br>SyTnAvgdXy",
     metadata:
-      "414\nn\nSyTnAvgdXy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "414<br>n<br>SyTnAvgdXy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -222,9 +222,9 @@ export const routePoints = [
   },
   {
     name: "BEG to VCE",
-    data: "777\nqUmDJmNcP\nCaFoq",
+    data: "777<br>qUmDJmNcP<br>CaFoq",
     metadata:
-      "777\nqUmDJmNcP\nCaFoq<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "777<br>qUmDJmNcP<br>CaFoq<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -242,9 +242,9 @@ export const routePoints = [
   },
   {
     name: "FRA to MRS",
-    data: "588\nsGC\nqbGCBlIeR",
+    data: "588<br>sGC<br>qbGCBlIeR",
     metadata:
-      "588\nsGC\nqbGCBlIeR<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "588<br>sGC<br>qbGCBlIeR<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -262,9 +262,9 @@ export const routePoints = [
   },
   {
     name: "HEL to EDI",
-    data: "711\npQOr\njeeMt",
+    data: "711<br>pQOr<br>jeeMt",
     metadata:
-      "711\npQOr\njeeMt<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "711<br>pQOr<br>jeeMt<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -282,9 +282,9 @@ export const routePoints = [
   },
   {
     name: "ZRH to AGP",
-    data: "428\ntH\nd",
+    data: "428<br>tH<br>d",
     metadata:
-      "428\ntH\nd<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "428<br>tH<br>d<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -302,9 +302,9 @@ export const routePoints = [
   },
   {
     name: "VIE to GVA",
-    data: "334\nwBT\ncTUnuAC",
+    data: "334<br>wBT<br>cTUnuAC",
     metadata:
-      "334\nwBT\ncTUnuAC<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "334<br>wBT<br>cTUnuAC<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -322,9 +322,9 @@ export const routePoints = [
   },
   {
     name: "ARN to GLA",
-    data: "726\neIuRd\nCZG",
+    data: "726<br>eIuRd<br>CZG",
     metadata:
-      "726\neIuRd\nCZG<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "726<br>eIuRd<br>CZG<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -342,9 +342,9 @@ export const routePoints = [
   },
   {
     name: "MRS to RAK",
-    data: "328\nYaLHJyGCUD\nEZsC",
+    data: "328<br>YaLHJyGCUD<br>EZsC",
     metadata:
-      "328\nYaLHJyGCUD\nEZsC<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "328<br>YaLHJyGCUD<br>EZsC<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -362,9 +362,9 @@ export const routePoints = [
   },
   {
     name: "CAI to GLA",
-    data: "57\nVXASnmG\nRYgiULHaU",
+    data: "57<br>VXASnmG<br>RYgiULHaU",
     metadata:
-      "57\nVXASnmG\nRYgiULHaU<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "57<br>VXASnmG<br>RYgiULHaU<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -382,9 +382,9 @@ export const routePoints = [
   },
   {
     name: "VIE to STN",
-    data: "414\nrLDFjec\nIZyDHH",
+    data: "414<br>rLDFjec<br>IZyDHH",
     metadata:
-      "414\nrLDFjec\nIZyDHH<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "414<br>rLDFjec<br>IZyDHH<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -402,9 +402,9 @@ export const routePoints = [
   },
   {
     name: "GVA to BCN",
-    data: "326\nZYWQG\nnvTeCeYpbG",
+    data: "326<br>ZYWQG<br>nvTeCeYpbG",
     metadata:
-      "326\nZYWQG\nnvTeCeYpbG<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "326<br>ZYWQG<br>nvTeCeYpbG<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -422,9 +422,9 @@ export const routePoints = [
   },
   {
     name: "BRS to LCA",
-    data: "408\nND\nigUuZor",
+    data: "408<br>ND<br>igUuZor",
     metadata:
-      "408\nND\nigUuZor<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "408<br>ND<br>igUuZor<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -442,9 +442,9 @@ export const routePoints = [
   },
   {
     name: "MXP to PRG",
-    data: "334\nZGQPndLU\nfjZ",
+    data: "334<br>ZGQPndLU<br>fjZ",
     metadata:
-      "334\nZGQPndLU\nfjZ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "334<br>ZGQPndLU<br>fjZ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -462,9 +462,9 @@ export const routePoints = [
   },
   {
     name: "ZRH to EMA",
-    data: "781\nwlXYkdtkvh\nbTJsGHPV",
+    data: "781<br>wlXYkdtkvh<br>bTJsGHPV",
     metadata:
-      "781\nwlXYkdtkvh\nbTJsGHPV<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "781<br>wlXYkdtkvh<br>bTJsGHPV<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -482,9 +482,9 @@ export const routePoints = [
   },
   {
     name: "SEN to SOF",
-    data: "318\nii\nLaYuKIgn",
+    data: "318<br>ii<br>LaYuKIgn",
     metadata:
-      "318\nii\nLaYuKIgn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "318<br>ii<br>LaYuKIgn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -502,9 +502,9 @@ export const routePoints = [
   },
   {
     name: "LCA to DUB",
-    data: "711\nTHYZUavG\nm",
+    data: "711<br>THYZUavG<br>m",
     metadata:
-      "711\nTHYZUavG\nm<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "711<br>THYZUavG<br>m<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -522,9 +522,9 @@ export const routePoints = [
   },
   {
     name: "TUN to RIX",
-    data: "136\nWmcSvzzsf\nhAZCQP",
+    data: "136<br>WmcSvzzsf<br>hAZCQP",
     metadata:
-      "136\nWmcSvzzsf\nhAZCQP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "136<br>WmcSvzzsf<br>hAZCQP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -542,9 +542,9 @@ export const routePoints = [
   },
   {
     name: "FRA to MRS",
-    data: "624\nBCOjDp\npzMVBkb",
+    data: "624<br>BCOjDp<br>pzMVBkb",
     metadata:
-      "624\nBCOjDp\npzMVBkb<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "624<br>BCOjDp<br>pzMVBkb<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -562,9 +562,9 @@ export const routePoints = [
   },
   {
     name: "STN to LPL",
-    data: "705\nrXVTYCSL\nxuGMhk",
+    data: "705<br>rXVTYCSL<br>xuGMhk",
     metadata:
-      "705\nrXVTYCSL\nxuGMhk<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "705<br>rXVTYCSL<br>xuGMhk<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -582,9 +582,9 @@ export const routePoints = [
   },
   {
     name: "BEG to EDI",
-    data: "670\nvaqCbc\nHIDqI",
+    data: "670<br>vaqCbc<br>HIDqI",
     metadata:
-      "670\nvaqCbc\nHIDqI<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "670<br>vaqCbc<br>HIDqI<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -602,9 +602,9 @@ export const routePoints = [
   },
   {
     name: "GLA to SOF",
-    data: "501\nVXsesHWB\nFGRT",
+    data: "501<br>VXsesHWB<br>FGRT",
     metadata:
-      "501\nVXsesHWB\nFGRT<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "501<br>VXsesHWB<br>FGRT<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -622,9 +622,9 @@ export const routePoints = [
   },
   {
     name: "STN to ORK",
-    data: "1\nlGZZrDlCs\nN",
+    data: "1<br>lGZZrDlCs<br>N",
     metadata:
-      "1\nlGZZrDlCs\nN<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "1<br>lGZZrDlCs<br>N<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -642,9 +642,9 @@ export const routePoints = [
   },
   {
     name: "LHR to ORK",
-    data: "58\nRNUZdj\nXGd",
+    data: "58<br>RNUZdj<br>XGd",
     metadata:
-      "58\nRNUZdj\nXGd<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "58<br>RNUZdj<br>XGd<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -662,9 +662,9 @@ export const routePoints = [
   },
   {
     name: "LPL to FCO",
-    data: "297\nwCItqkkr\nAnamklKJ",
+    data: "297<br>wCItqkkr<br>AnamklKJ",
     metadata:
-      "297\nwCItqkkr\nAnamklKJ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "297<br>wCItqkkr<br>AnamklKJ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -682,9 +682,9 @@ export const routePoints = [
   },
   {
     name: "STN to CPH",
-    data: "950\nSujwBTFpW\nG",
+    data: "950<br>SujwBTFpW<br>G",
     metadata:
-      "950\nSujwBTFpW\nG<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "950<br>SujwBTFpW<br>G<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -702,9 +702,9 @@ export const routePoints = [
   },
   {
     name: "ARN to ZRH",
-    data: "553\nvvcTc\nRQ",
+    data: "553<br>vvcTc<br>RQ",
     metadata:
-      "553\nvvcTc\nRQ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "553<br>vvcTc<br>RQ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -722,9 +722,9 @@ export const routePoints = [
   },
   {
     name: "ALG to EMA",
-    data: "972\nLfHD\nTiXenXK",
+    data: "972<br>LfHD<br>TiXenXK",
     metadata:
-      "972\nLfHD\nTiXenXK<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "972<br>LfHD<br>TiXenXK<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -742,9 +742,9 @@ export const routePoints = [
   },
   {
     name: "BUD to CAI",
-    data: "978\nCMTQtPHKU\nF",
+    data: "978<br>CMTQtPHKU<br>F",
     metadata:
-      "978\nCMTQtPHKU\nF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "978<br>CMTQtPHKU<br>F<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -762,9 +762,9 @@ export const routePoints = [
   },
   {
     name: "AMS to MAD",
-    data: "508\nAeotoZLIan\nzZxK",
+    data: "508<br>AeotoZLIan<br>zZxK",
     metadata:
-      "508\nAeotoZLIan\nzZxK<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "508<br>AeotoZLIan<br>zZxK<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -782,9 +782,9 @@ export const routePoints = [
   },
   {
     name: "PRG to AMS",
-    data: "12\nQcUAB\nlnaxvODgPp",
+    data: "12<br>QcUAB<br>lnaxvODgPp",
     metadata:
-      "12\nQcUAB\nlnaxvODgPp<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "12<br>QcUAB<br>lnaxvODgPp<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -802,9 +802,9 @@ export const routePoints = [
   },
   {
     name: "CAI to SOF",
-    data: "233\nu\nsZBwBxUJ",
+    data: "233<br>u<br>sZBwBxUJ",
     metadata:
-      "233\nu\nsZBwBxUJ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "233<br>u<br>sZBwBxUJ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -822,9 +822,9 @@ export const routePoints = [
   },
   {
     name: "LPL to MXP",
-    data: "961\nXpo\nR",
+    data: "961<br>Xpo<br>R",
     metadata:
-      "961\nXpo\nR<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "961<br>Xpo<br>R<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -842,9 +842,9 @@ export const routePoints = [
   },
   {
     name: "ZRH to CPH",
-    data: "305\nsP\nzRzLcJAF",
+    data: "305<br>sP<br>zRzLcJAF",
     metadata:
-      "305\nsP\nzRzLcJAF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "305<br>sP<br>zRzLcJAF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -862,9 +862,9 @@ export const routePoints = [
   },
   {
     name: "DUB to SOF",
-    data: "886\nzQiurpwgr\nKaCNbURs",
+    data: "886<br>zQiurpwgr<br>KaCNbURs",
     metadata:
-      "886\nzQiurpwgr\nKaCNbURs<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "886<br>zQiurpwgr<br>KaCNbURs<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -882,9 +882,9 @@ export const routePoints = [
   },
   {
     name: "TUN to MUC",
-    data: "230\ntRNslHGsu\nBbwLyQo",
+    data: "230<br>tRNslHGsu<br>BbwLyQo",
     metadata:
-      "230\ntRNslHGsu\nBbwLyQo<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "230<br>tRNslHGsu<br>BbwLyQo<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -902,9 +902,9 @@ export const routePoints = [
   },
   {
     name: "DBV to HEL",
-    data: "88\nZ\nLwdSVMNs",
+    data: "88<br>Z<br>LwdSVMNs",
     metadata:
-      "88\nZ\nLwdSVMNs<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "88<br>Z<br>LwdSVMNs<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -922,9 +922,9 @@ export const routePoints = [
   },
   {
     name: "VCE to TXL",
-    data: "939\nifUS\nFaWgvxzI",
+    data: "939<br>ifUS<br>FaWgvxzI",
     metadata:
-      "939\nifUS\nFaWgvxzI<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "939<br>ifUS<br>FaWgvxzI<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -942,9 +942,9 @@ export const routePoints = [
   },
   {
     name: "ARN to OSL",
-    data: "762\nNcWnFoQPE\nZstXbOIu",
+    data: "762<br>NcWnFoQPE<br>ZstXbOIu",
     metadata:
-      "762\nNcWnFoQPE\nZstXbOIu<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "762<br>NcWnFoQPE<br>ZstXbOIu<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -962,9 +962,9 @@ export const routePoints = [
   },
   {
     name: "RAK to RIX",
-    data: "141\nAIjJ\nW",
+    data: "141<br>AIjJ<br>W",
     metadata:
-      "141\nAIjJ\nW<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "141<br>AIjJ<br>W<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -982,9 +982,9 @@ export const routePoints = [
   },
   {
     name: "HRG to LIS",
-    data: "433\noIUopqDi\nWZQLSU",
+    data: "433<br>oIUopqDi<br>WZQLSU",
     metadata:
-      "433\noIUopqDi\nWZQLSU<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "433<br>oIUopqDi<br>WZQLSU<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1002,9 +1002,9 @@ export const routePoints = [
   },
   {
     name: "RIX to GLA",
-    data: "704\nxIvzN\nicDjLNICK",
+    data: "704<br>xIvzN<br>icDjLNICK",
     metadata:
-      "704\nxIvzN\nicDjLNICK<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "704<br>xIvzN<br>icDjLNICK<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1022,9 +1022,9 @@ export const routePoints = [
   },
   {
     name: "BFS to OSL",
-    data: "477\nPJ\nJKVViA",
+    data: "477<br>PJ<br>JKVViA",
     metadata:
-      "477\nPJ\nJKVViA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "477<br>PJ<br>JKVViA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1042,9 +1042,9 @@ export const routePoints = [
   },
   {
     name: "STN to SSH",
-    data: "251\nRbNKpqc\nj",
+    data: "251<br>RbNKpqc<br>j",
     metadata:
-      "251\nRbNKpqc\nj<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "251<br>RbNKpqc<br>j<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1062,9 +1062,9 @@ export const routePoints = [
   },
   {
     name: "ORK to VIE",
-    data: "622\nfdX\niXa",
+    data: "622<br>fdX<br>iXa",
     metadata:
-      "622\nfdX\niXa<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "622<br>fdX<br>iXa<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1082,9 +1082,9 @@ export const routePoints = [
   },
   {
     name: "AMS to LHR",
-    data: "412\nPqBZCnKh\nUUF",
+    data: "412<br>PqBZCnKh<br>UUF",
     metadata:
-      "412\nPqBZCnKh\nUUF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "412<br>PqBZCnKh<br>UUF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1102,9 +1102,9 @@ export const routePoints = [
   },
   {
     name: "ARN to ORK",
-    data: "294\nTzJ\nIRcqdPvwEF",
+    data: "294<br>TzJ<br>IRcqdPvwEF",
     metadata:
-      "294\nTzJ\nIRcqdPvwEF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "294<br>TzJ<br>IRcqdPvwEF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1122,9 +1122,9 @@ export const routePoints = [
   },
   {
     name: "GLA to CDG",
-    data: "116\ndpmpcPtx\njebdFUs",
+    data: "116<br>dpmpcPtx<br>jebdFUs",
     metadata:
-      "116\ndpmpcPtx\njebdFUs<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "116<br>dpmpcPtx<br>jebdFUs<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1142,9 +1142,9 @@ export const routePoints = [
   },
   {
     name: "VIE to IST",
-    data: "503\nWdUif\nWxq",
+    data: "503<br>WdUif<br>Wxq",
     metadata:
-      "503\nWdUif\nWxq<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "503<br>WdUif<br>Wxq<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1162,9 +1162,9 @@ export const routePoints = [
   },
   {
     name: "HEL to RIX",
-    data: "126\nnhB\nZPuOi",
+    data: "126<br>nhB<br>ZPuOi",
     metadata:
-      "126\nnhB\nZPuOi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "126<br>nhB<br>ZPuOi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1182,9 +1182,9 @@ export const routePoints = [
   },
   {
     name: "SNN to LCA",
-    data: "787\nWgl\nCjvDOEp",
+    data: "787<br>Wgl<br>CjvDOEp",
     metadata:
-      "787\nWgl\nCjvDOEp<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "787<br>Wgl<br>CjvDOEp<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1202,9 +1202,9 @@ export const routePoints = [
   },
   {
     name: "BOD to ORK",
-    data: "31\nfPrghkXas\nmTIbQWQZX",
+    data: "31<br>fPrghkXas<br>mTIbQWQZX",
     metadata:
-      "31\nfPrghkXas\nmTIbQWQZX<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "31<br>fPrghkXas<br>mTIbQWQZX<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1222,9 +1222,9 @@ export const routePoints = [
   },
   {
     name: "BFS to CAI",
-    data: "272\ndhJ\nwlAjuE",
+    data: "272<br>dhJ<br>wlAjuE",
     metadata:
-      "272\ndhJ\nwlAjuE<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "272<br>dhJ<br>wlAjuE<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1242,9 +1242,9 @@ export const routePoints = [
   },
   {
     name: "AGP to FRA",
-    data: "70\nouEDxpD\niPapPSqXFA",
+    data: "70<br>ouEDxpD<br>iPapPSqXFA",
     metadata:
-      "70\nouEDxpD\niPapPSqXFA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "70<br>ouEDxpD<br>iPapPSqXFA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1262,9 +1262,9 @@ export const routePoints = [
   },
   {
     name: "BUD to LYS",
-    data: "557\nrsuSDdD\nPZtgVqrB",
+    data: "557<br>rsuSDdD<br>PZtgVqrB",
     metadata:
-      "557\nrsuSDdD\nPZtgVqrB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "557<br>rsuSDdD<br>PZtgVqrB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1282,9 +1282,9 @@ export const routePoints = [
   },
   {
     name: "ARN to ORK",
-    data: "210\njLnY\npJ",
+    data: "210<br>jLnY<br>pJ",
     metadata:
-      "210\njLnY\npJ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "210<br>jLnY<br>pJ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1302,9 +1302,9 @@ export const routePoints = [
   },
   {
     name: "BFS to PRG",
-    data: "235\nTYNMCTd\nLGSPnpxwEl",
+    data: "235<br>TYNMCTd<br>LGSPnpxwEl",
     metadata:
-      "235\nTYNMCTd\nLGSPnpxwEl<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "235<br>TYNMCTd<br>LGSPnpxwEl<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1322,9 +1322,9 @@ export const routePoints = [
   },
   {
     name: "SNN to OTP",
-    data: "877\nkdGzbk\nuSh",
+    data: "877<br>kdGzbk<br>uSh",
     metadata:
-      "877\nkdGzbk\nuSh<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "877<br>kdGzbk<br>uSh<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1342,9 +1342,9 @@ export const routePoints = [
   },
   {
     name: "BEG to NCL",
-    data: "731\neIPgpC\niJTMPuD",
+    data: "731<br>eIPgpC<br>iJTMPuD",
     metadata:
-      "731\neIPgpC\niJTMPuD<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "731<br>eIPgpC<br>iJTMPuD<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1362,9 +1362,9 @@ export const routePoints = [
   },
   {
     name: "BOD to MXP",
-    data: "332\nxAStN\nnBmsWck",
+    data: "332<br>xAStN<br>nBmsWck",
     metadata:
-      "332\nxAStN\nnBmsWck<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "332<br>xAStN<br>nBmsWck<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1382,9 +1382,9 @@ export const routePoints = [
   },
   {
     name: "NCL to RAK",
-    data: "633\nzZoXumQCet\njZrZRFo",
+    data: "633<br>zZoXumQCet<br>jZrZRFo",
     metadata:
-      "633\nzZoXumQCet\njZrZRFo<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "633<br>zZoXumQCet<br>jZrZRFo<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1402,9 +1402,9 @@ export const routePoints = [
   },
   {
     name: "LED to ORK",
-    data: "759\nFOKE\nturrmsP",
+    data: "759<br>FOKE<br>turrmsP",
     metadata:
-      "759\nFOKE\nturrmsP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "759<br>FOKE<br>turrmsP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1422,9 +1422,9 @@ export const routePoints = [
   },
   {
     name: "MXP to PRG",
-    data: "756\nvXOsof\neCwc",
+    data: "756<br>vXOsof<br>eCwc",
     metadata:
-      "756\nvXOsof\neCwc<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "756<br>vXOsof<br>eCwc<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1442,9 +1442,9 @@ export const routePoints = [
   },
   {
     name: "GVA to CPH",
-    data: "566\nRfEVKSZmRs\noGQRdKGLfT",
+    data: "566<br>RfEVKSZmRs<br>oGQRdKGLfT",
     metadata:
-      "566\nRfEVKSZmRs\noGQRdKGLfT<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "566<br>RfEVKSZmRs<br>oGQRdKGLfT<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1462,9 +1462,9 @@ export const routePoints = [
   },
   {
     name: "RAK to MAN",
-    data: "859\nvON\nmokRWF",
+    data: "859<br>vON<br>mokRWF",
     metadata:
-      "859\nvON\nmokRWF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "859<br>vON<br>mokRWF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1482,9 +1482,9 @@ export const routePoints = [
   },
   {
     name: "LYS to AGP",
-    data: "632\nkXrYp\nzdSmcS",
+    data: "632<br>kXrYp<br>zdSmcS",
     metadata:
-      "632\nkXrYp\nzdSmcS<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "632<br>kXrYp<br>zdSmcS<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1502,9 +1502,9 @@ export const routePoints = [
   },
   {
     name: "WAW to BFS",
-    data: "89\nDLvFlCElxP\nxpzkFiquGw",
+    data: "89<br>DLvFlCElxP<br>xpzkFiquGw",
     metadata:
-      "89\nDLvFlCElxP\nxpzkFiquGw<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "89<br>DLvFlCElxP<br>xpzkFiquGw<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1522,9 +1522,9 @@ export const routePoints = [
   },
   {
     name: "EDI to BHX",
-    data: "685\neNhUBbqKR\nxzwoNmHQL",
+    data: "685<br>eNhUBbqKR<br>xzwoNmHQL",
     metadata:
-      "685\neNhUBbqKR\nxzwoNmHQL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "685<br>eNhUBbqKR<br>xzwoNmHQL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1542,9 +1542,9 @@ export const routePoints = [
   },
   {
     name: "BRS to MRS",
-    data: "354\nGRsXcN\nl",
+    data: "354<br>GRsXcN<br>l",
     metadata:
-      "354\nGRsXcN\nl<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "354<br>GRsXcN<br>l<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1562,9 +1562,9 @@ export const routePoints = [
   },
   {
     name: "ALG to LPL",
-    data: "261\naQthVnXFX\nVJtL",
+    data: "261<br>aQthVnXFX<br>VJtL",
     metadata:
-      "261\naQthVnXFX\nVJtL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "261<br>aQthVnXFX<br>VJtL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1582,9 +1582,9 @@ export const routePoints = [
   },
   {
     name: "TUN to STN",
-    data: "242\nrmpsHchP\nIfOUwYH",
+    data: "242<br>rmpsHchP<br>IfOUwYH",
     metadata:
-      "242\nrmpsHchP\nIfOUwYH<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "242<br>rmpsHchP<br>IfOUwYH<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1602,9 +1602,9 @@ export const routePoints = [
   },
   {
     name: "MRS to FCO",
-    data: "563\nroAGczqhP\nt",
+    data: "563<br>roAGczqhP<br>t",
     metadata:
-      "563\nroAGczqhP\nt<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "563<br>roAGczqhP<br>t<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1622,9 +1622,9 @@ export const routePoints = [
   },
   {
     name: "CPH to LED",
-    data: "567\nuvuHruNX\nOKUWEMPFb",
+    data: "567<br>uvuHruNX<br>OKUWEMPFb",
     metadata:
-      "567\nuvuHruNX\nOKUWEMPFb<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "567<br>uvuHruNX<br>OKUWEMPFb<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1642,9 +1642,9 @@ export const routePoints = [
   },
   {
     name: "BUD to ATH",
-    data: "907\nfTHCawlqI\nt",
+    data: "907<br>fTHCawlqI<br>t",
     metadata:
-      "907\nfTHCawlqI\nt<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "907<br>fTHCawlqI<br>t<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1662,9 +1662,9 @@ export const routePoints = [
   },
   {
     name: "AGP to LED",
-    data: "113\nUdKEhHhAlR\nuKOYB",
+    data: "113<br>UdKEhHhAlR<br>uKOYB",
     metadata:
-      "113\nUdKEhHhAlR\nuKOYB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "113<br>UdKEhHhAlR<br>uKOYB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1682,9 +1682,9 @@ export const routePoints = [
   },
   {
     name: "ARN to DUS",
-    data: "196\nO\nRNCBomzD",
+    data: "196<br>O<br>RNCBomzD",
     metadata:
-      "196\nO\nRNCBomzD<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "196<br>O<br>RNCBomzD<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1702,9 +1702,9 @@ export const routePoints = [
   },
   {
     name: "OSL to TXL",
-    data: "382\nnw\nHUuxSSiob",
+    data: "382<br>nw<br>HUuxSSiob",
     metadata:
-      "382\nnw\nHUuxSSiob<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "382<br>nw<br>HUuxSSiob<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1722,9 +1722,9 @@ export const routePoints = [
   },
   {
     name: "EMA to MRS",
-    data: "711\nuCK\nzTZT",
+    data: "711<br>uCK<br>zTZT",
     metadata:
-      "711\nuCK\nzTZT<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "711<br>uCK<br>zTZT<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1742,9 +1742,9 @@ export const routePoints = [
   },
   {
     name: "DBV to SNN",
-    data: "313\nbjm\nzZujj",
+    data: "313<br>bjm<br>zZujj",
     metadata:
-      "313\nbjm\nzZujj<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "313<br>bjm<br>zZujj<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1762,9 +1762,9 @@ export const routePoints = [
   },
   {
     name: "BFS to LIS",
-    data: "486\nbcGdRIAX\nU",
+    data: "486<br>bcGdRIAX<br>U",
     metadata:
-      "486\nbcGdRIAX\nU<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "486<br>bcGdRIAX<br>U<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1782,9 +1782,9 @@ export const routePoints = [
   },
   {
     name: "FRA to SEN",
-    data: "532\nJOCLTgeIuT\nueGkrExfe",
+    data: "532<br>JOCLTgeIuT<br>ueGkrExfe",
     metadata:
-      "532\nJOCLTgeIuT\nueGkrExfe<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "532<br>JOCLTgeIuT<br>ueGkrExfe<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1802,9 +1802,9 @@ export const routePoints = [
   },
   {
     name: "FCO to EDI",
-    data: "644\nsWV\nrNmgZNdtz",
+    data: "644<br>sWV<br>rNmgZNdtz",
     metadata:
-      "644\nsWV\nrNmgZNdtz<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "644<br>sWV<br>rNmgZNdtz<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1822,9 +1822,9 @@ export const routePoints = [
   },
   {
     name: "AMS to CMN",
-    data: "260\nbXIOw\nlal",
+    data: "260<br>bXIOw<br>lal",
     metadata:
-      "260\nbXIOw\nlal<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "260<br>bXIOw<br>lal<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1842,9 +1842,9 @@ export const routePoints = [
   },
   {
     name: "SNN to IST",
-    data: "856\neOwXrY\nuwxXLdXldn",
+    data: "856<br>eOwXrY<br>uwxXLdXldn",
     metadata:
-      "856\neOwXrY\nuwxXLdXldn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "856<br>eOwXrY<br>uwxXLdXldn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1862,9 +1862,9 @@ export const routePoints = [
   },
   {
     name: "ARN to TXL",
-    data: "941\nFVdnBPLMQ\njEZiA",
+    data: "941<br>FVdnBPLMQ<br>jEZiA",
     metadata:
-      "941\nFVdnBPLMQ\njEZiA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "941<br>FVdnBPLMQ<br>jEZiA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1882,9 +1882,9 @@ export const routePoints = [
   },
   {
     name: "CMN to CDG",
-    data: "861\nhxRVpXozES\ntXgQDW",
+    data: "861<br>hxRVpXozES<br>tXgQDW",
     metadata:
-      "861\nhxRVpXozES\ntXgQDW<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "861<br>hxRVpXozES<br>tXgQDW<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1902,9 +1902,9 @@ export const routePoints = [
   },
   {
     name: "GLA to ALG",
-    data: "626\nd\nbJcWnvDCap",
+    data: "626<br>d<br>bJcWnvDCap",
     metadata:
-      "626\nd\nbJcWnvDCap<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "626<br>d<br>bJcWnvDCap<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1922,9 +1922,9 @@ export const routePoints = [
   },
   {
     name: "NCL to MAN",
-    data: "12\ncV\nrxwucQW",
+    data: "12<br>cV<br>rxwucQW",
     metadata:
-      "12\ncV\nrxwucQW<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "12<br>cV<br>rxwucQW<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1942,9 +1942,9 @@ export const routePoints = [
   },
   {
     name: "ATH to LHR",
-    data: "982\nSHvzV\nkbvjHVjRSW",
+    data: "982<br>SHvzV<br>kbvjHVjRSW",
     metadata:
-      "982\nSHvzV\nkbvjHVjRSW<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "982<br>SHvzV<br>kbvjHVjRSW<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1962,9 +1962,9 @@ export const routePoints = [
   },
   {
     name: "VIE to OSL",
-    data: "16\nZCq\nlfdRYZCQHF",
+    data: "16<br>ZCq<br>lfdRYZCQHF",
     metadata:
-      "16\nZCq\nlfdRYZCQHF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "16<br>ZCq<br>lfdRYZCQHF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -1982,9 +1982,9 @@ export const routePoints = [
   },
   {
     name: "MRS to AMS",
-    data: "194\ndFs\nWRCURfgWlr",
+    data: "194<br>dFs<br>WRCURfgWlr",
     metadata:
-      "194\ndFs\nWRCURfgWlr<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "194<br>dFs<br>WRCURfgWlr<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -2002,9 +2002,9 @@ export const routePoints = [
   },
   {
     name: "FRA to LJU",
-    data: "281\nJVBMkXZoZi\nytDqn",
+    data: "281<br>JVBMkXZoZi<br>ytDqn",
     metadata:
-      "281\nJVBMkXZoZi\nytDqn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "281<br>JVBMkXZoZi<br>ytDqn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -2022,9 +2022,9 @@ export const routePoints = [
   },
   {
     name: "LCA to FRA",
-    data: "54\nFC\nmRHP",
+    data: "54<br>FC<br>mRHP",
     metadata:
-      "54\nFC\nmRHP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "54<br>FC<br>mRHP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -2042,9 +2042,9 @@ export const routePoints = [
   },
   {
     name: "BOD to BRU",
-    data: "836\nVDiqWpFR\nAK",
+    data: "836<br>VDiqWpFR<br>AK",
     metadata:
-      "836\nVDiqWpFR\nAK<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "836<br>VDiqWpFR<br>AK<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -2062,9 +2062,9 @@ export const routePoints = [
   },
   {
     name: "RIX to BOD",
-    data: "441\ntvMlC\nGmnNZ",
+    data: "441<br>tvMlC<br>GmnNZ",
     metadata:
-      "441\ntvMlC\nGmnNZ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "441<br>tvMlC<br>GmnNZ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -2082,9 +2082,9 @@ export const routePoints = [
   },
   {
     name: "MUC to WAW",
-    data: "344\nuGOet\nYOUO",
+    data: "344<br>uGOet<br>YOUO",
     metadata:
-      "344\nuGOet\nYOUO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "344<br>uGOet<br>YOUO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -2102,9 +2102,9 @@ export const routePoints = [
   },
   {
     name: "LPL to ARN",
-    data: "723\nXHNlRoV\nVv",
+    data: "723<br>XHNlRoV<br>Vv",
     metadata:
-      "723\nXHNlRoV\nVv<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "723<br>XHNlRoV<br>Vv<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -2122,9 +2122,9 @@ export const routePoints = [
   },
   {
     name: "ZAG to SEN",
-    data: "270\nzc\nlgvcTohfGw",
+    data: "270<br>zc<br>lgvcTohfGw",
     metadata:
-      "270\nzc\nlgvcTohfGw<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "270<br>zc<br>lgvcTohfGw<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674226873,
@@ -2142,9 +2142,9 @@ export const routePoints = [
   },
   {
     name: "GSP to ATL",
-    data: "360\nxoShwiUcDR\nsyxdYRx",
+    data: "360<br>xoShwiUcDR<br>syxdYRx",
     metadata:
-      "360\nxoShwiUcDR\nsyxdYRx<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "360<br>xoShwiUcDR<br>syxdYRx<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2162,9 +2162,9 @@ export const routePoints = [
   },
   {
     name: "GSO to TYS",
-    data: "940\nCPWL\nnxVkIAU",
+    data: "940<br>CPWL<br>nxVkIAU",
     metadata:
-      "940\nCPWL\nnxVkIAU<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "940<br>CPWL<br>nxVkIAU<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2182,9 +2182,9 @@ export const routePoints = [
   },
   {
     name: "TPA to JAX",
-    data: "653\njWaosTZHjY\nmImE",
+    data: "653<br>jWaosTZHjY<br>mImE",
     metadata:
-      "653\njWaosTZHjY\nmImE<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "653<br>jWaosTZHjY<br>mImE<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2202,9 +2202,9 @@ export const routePoints = [
   },
   {
     name: "BUF to BOS",
-    data: "720\nexDLDq\nfHD",
+    data: "720<br>exDLDq<br>fHD",
     metadata:
-      "720\nexDLDq\nfHD<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "720<br>exDLDq<br>fHD<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2222,9 +2222,9 @@ export const routePoints = [
   },
   {
     name: "MSN to MSY",
-    data: "257\nJsL\nC",
+    data: "257<br>JsL<br>C",
     metadata:
-      "257\nJsL\nC<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "257<br>JsL<br>C<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2242,9 +2242,9 @@ export const routePoints = [
   },
   {
     name: "TLH to MKE",
-    data: "372\nVv\nVjKvVByJQ",
+    data: "372<br>Vv<br>VjKvVByJQ",
     metadata:
-      "372\nVv\nVjKvVByJQ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "372<br>Vv<br>VjKvVByJQ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2262,9 +2262,9 @@ export const routePoints = [
   },
   {
     name: "ICT to LGB",
-    data: "131\nUYTimiJk\nRsQqdO",
+    data: "131<br>UYTimiJk<br>RsQqdO",
     metadata:
-      "131\nUYTimiJk\nRsQqdO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "131<br>UYTimiJk<br>RsQqdO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2282,9 +2282,9 @@ export const routePoints = [
   },
   {
     name: "TUL to RDU",
-    data: "976\nxdDKwfHYO\nOXepAg",
+    data: "976<br>xdDKwfHYO<br>OXepAg",
     metadata:
-      "976\nxdDKwfHYO\nOXepAg<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "976<br>xdDKwfHYO<br>OXepAg<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2302,9 +2302,9 @@ export const routePoints = [
   },
   {
     name: "PVD to BDL",
-    data: "553\nIyrbwJjm\nzmHVhS",
+    data: "553<br>IyrbwJjm<br>zmHVhS",
     metadata:
-      "553\nIyrbwJjm\nzmHVhS<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "553<br>IyrbwJjm<br>zmHVhS<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2322,9 +2322,9 @@ export const routePoints = [
   },
   {
     name: "MDW to MCO",
-    data: "711\nYBSzTRevsM\nJwIov",
+    data: "711<br>YBSzTRevsM<br>JwIov",
     metadata:
-      "711\nYBSzTRevsM\nJwIov<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "711<br>YBSzTRevsM<br>JwIov<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2342,9 +2342,9 @@ export const routePoints = [
   },
   {
     name: "JAX to BOI",
-    data: "631\nbOJxfUF\nvHWuA",
+    data: "631<br>bOJxfUF<br>vHWuA",
     metadata:
-      "631\nbOJxfUF\nvHWuA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "631<br>bOJxfUF<br>vHWuA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2362,9 +2362,9 @@ export const routePoints = [
   },
   {
     name: "MCO to IAD",
-    data: "372\neYHvnofxc\nuKujfx",
+    data: "372<br>eYHvnofxc<br>uKujfx",
     metadata:
-      "372\neYHvnofxc\nuKujfx<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "372<br>eYHvnofxc<br>uKujfx<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2382,9 +2382,9 @@ export const routePoints = [
   },
   {
     name: "BTV to SEA",
-    data: "908\nybZspQKxm\nKrd",
+    data: "908<br>ybZspQKxm<br>Krd",
     metadata:
-      "908\nybZspQKxm\nKrd<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "908<br>ybZspQKxm<br>Krd<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2402,9 +2402,9 @@ export const routePoints = [
   },
   {
     name: "LGB to GSO",
-    data: "768\nZpbx\nYFioDnU",
+    data: "768<br>Zpbx<br>YFioDnU",
     metadata:
-      "768\nZpbx\nYFioDnU<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "768<br>Zpbx<br>YFioDnU<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2422,9 +2422,9 @@ export const routePoints = [
   },
   {
     name: "MCO to JFK",
-    data: "797\noHKGilAuOC\nBYnNhi",
+    data: "797<br>oHKGilAuOC<br>BYnNhi",
     metadata:
-      "797\noHKGilAuOC\nBYnNhi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "797<br>oHKGilAuOC<br>BYnNhi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2442,9 +2442,9 @@ export const routePoints = [
   },
   {
     name: "LAS to PVD",
-    data: "285\nJCqU\nKNZWmsav",
+    data: "285<br>JCqU<br>KNZWmsav",
     metadata:
-      "285\nJCqU\nKNZWmsav<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "285<br>JCqU<br>KNZWmsav<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2462,9 +2462,9 @@ export const routePoints = [
   },
   {
     name: "SAT to BNA",
-    data: "721\nE\nwwiSRwSY",
+    data: "721<br>E<br>wwiSRwSY",
     metadata:
-      "721\nE\nwwiSRwSY<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "721<br>E<br>wwiSRwSY<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2482,9 +2482,9 @@ export const routePoints = [
   },
   {
     name: "IAH to SMF",
-    data: "361\nglL\ntrP",
+    data: "361<br>glL<br>trP",
     metadata:
-      "361\nglL\ntrP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "361<br>glL<br>trP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2502,9 +2502,9 @@ export const routePoints = [
   },
   {
     name: "LAX to ORF",
-    data: "776\nE\nXUVZsWTWxR",
+    data: "776<br>E<br>XUVZsWTWxR",
     metadata:
-      "776\nE\nXUVZsWTWxR<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "776<br>E<br>XUVZsWTWxR<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2522,9 +2522,9 @@ export const routePoints = [
   },
   {
     name: "BTV to GPT",
-    data: "691\nZusNeCnzuj\nPdru",
+    data: "691<br>ZusNeCnzuj<br>Pdru",
     metadata:
-      "691\nZusNeCnzuj\nPdru<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "691<br>ZusNeCnzuj<br>Pdru<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2542,9 +2542,9 @@ export const routePoints = [
   },
   {
     name: "HNL to FAT",
-    data: "728\nCw\nLWzmwbwKlA",
+    data: "728<br>Cw<br>LWzmwbwKlA",
     metadata:
-      "728\nCw\nLWzmwbwKlA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "728<br>Cw<br>LWzmwbwKlA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2562,9 +2562,9 @@ export const routePoints = [
   },
   {
     name: "PBI to BNA",
-    data: "303\nDg\naCHwkevKCA",
+    data: "303<br>Dg<br>aCHwkevKCA",
     metadata:
-      "303\nDg\naCHwkevKCA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "303<br>Dg<br>aCHwkevKCA<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2582,9 +2582,9 @@ export const routePoints = [
   },
   {
     name: "TUS to ORD",
-    data: "628\nDKtHxl\naQLmo",
+    data: "628<br>DKtHxl<br>aQLmo",
     metadata:
-      "628\nDKtHxl\naQLmo<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "628<br>DKtHxl<br>aQLmo<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2602,9 +2602,9 @@ export const routePoints = [
   },
   {
     name: "RDU to EWR",
-    data: "311\ncMWUy\naNJEI",
+    data: "311<br>cMWUy<br>aNJEI",
     metadata:
-      "311\ncMWUy\naNJEI<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "311<br>cMWUy<br>aNJEI<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2622,9 +2622,9 @@ export const routePoints = [
   },
   {
     name: "BWI to OGG",
-    data: "811\nrgYD\nhCXIPUv",
+    data: "811<br>rgYD<br>hCXIPUv",
     metadata:
-      "811\nrgYD\nhCXIPUv<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "811<br>rgYD<br>hCXIPUv<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2642,9 +2642,9 @@ export const routePoints = [
   },
   {
     name: "DFW to CLT",
-    data: "393\noqEDTU\nXa",
+    data: "393<br>oqEDTU<br>Xa",
     metadata:
-      "393\noqEDTU\nXa<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "393<br>oqEDTU<br>Xa<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2662,9 +2662,9 @@ export const routePoints = [
   },
   {
     name: "AVL to BUR",
-    data: "794\noexswrdRTF\nM",
+    data: "794<br>oexswrdRTF<br>M",
     metadata:
-      "794\noexswrdRTF\nM<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "794<br>oexswrdRTF<br>M<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2682,9 +2682,9 @@ export const routePoints = [
   },
   {
     name: "HOU to AVL",
-    data: "473\naGhdnszWt\nxVfTjhL",
+    data: "473<br>aGhdnszWt<br>xVfTjhL",
     metadata:
-      "473\naGhdnszWt\nxVfTjhL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "473<br>aGhdnszWt<br>xVfTjhL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2702,9 +2702,9 @@ export const routePoints = [
   },
   {
     name: "HSV to MCO",
-    data: "128\nYLRoQMWXsK\nNkRV",
+    data: "128<br>YLRoQMWXsK<br>NkRV",
     metadata:
-      "128\nYLRoQMWXsK\nNkRV<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "128<br>YLRoQMWXsK<br>NkRV<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2722,9 +2722,9 @@ export const routePoints = [
   },
   {
     name: "TUS to CLT",
-    data: "634\nKK\nSY",
+    data: "634<br>KK<br>SY",
     metadata:
-      "634\nKK\nSY<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "634<br>KK<br>SY<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2742,9 +2742,9 @@ export const routePoints = [
   },
   {
     name: "AUS to FAT",
-    data: "428\nQD\nfieRa",
+    data: "428<br>QD<br>fieRa",
     metadata:
-      "428\nQD\nfieRa<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "428<br>QD<br>fieRa<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2762,9 +2762,9 @@ export const routePoints = [
   },
   {
     name: "ORD to TYS",
-    data: "303\namNWjWy\nbKdkbp",
+    data: "303<br>amNWjWy<br>bKdkbp",
     metadata:
-      "303\namNWjWy\nbKdkbp<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "303<br>amNWjWy<br>bKdkbp<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2782,9 +2782,9 @@ export const routePoints = [
   },
   {
     name: "MIA to DEN",
-    data: "508\nZjrhcwl\niWONO",
+    data: "508<br>Zjrhcwl<br>iWONO",
     metadata:
-      "508\nZjrhcwl\niWONO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "508<br>Zjrhcwl<br>iWONO<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2802,9 +2802,9 @@ export const routePoints = [
   },
   {
     name: "XNA to BNA",
-    data: "490\nYleJi\ngizYp",
+    data: "490<br>YleJi<br>gizYp",
     metadata:
-      "490\nYleJi\ngizYp<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "490<br>YleJi<br>gizYp<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2822,9 +2822,9 @@ export const routePoints = [
   },
   {
     name: "BUR to DFW",
-    data: "165\nUKRVYq\ne",
+    data: "165<br>UKRVYq<br>e",
     metadata:
-      "165\nUKRVYq\ne<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "165<br>UKRVYq<br>e<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2842,9 +2842,9 @@ export const routePoints = [
   },
   {
     name: "LAS to BHM",
-    data: "516\nZkgRuAdJXh\nbOpmmGZsb",
+    data: "516<br>ZkgRuAdJXh<br>bOpmmGZsb",
     metadata:
-      "516\nZkgRuAdJXh\nbOpmmGZsb<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "516<br>ZkgRuAdJXh<br>bOpmmGZsb<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2862,9 +2862,9 @@ export const routePoints = [
   },
   {
     name: "DFW to BWI",
-    data: "98\nlbex\nAwEtN",
+    data: "98<br>lbex<br>AwEtN",
     metadata:
-      "98\nlbex\nAwEtN<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "98<br>lbex<br>AwEtN<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2882,9 +2882,9 @@ export const routePoints = [
   },
   {
     name: "PVD to PDX",
-    data: "175\nR\nxEYjLWrZCH",
+    data: "175<br>R<br>xEYjLWrZCH",
     metadata:
-      "175\nR\nxEYjLWrZCH<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "175<br>R<br>xEYjLWrZCH<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2902,9 +2902,9 @@ export const routePoints = [
   },
   {
     name: "CHS to BUR",
-    data: "674\nwv\nILMIUJsi",
+    data: "674<br>wv<br>ILMIUJsi",
     metadata:
-      "674\nwv\nILMIUJsi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "674<br>wv<br>ILMIUJsi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2922,9 +2922,9 @@ export const routePoints = [
   },
   {
     name: "DAY to CVG",
-    data: "403\nelWpKwtFF\nClMoPZ",
+    data: "403<br>elWpKwtFF<br>ClMoPZ",
     metadata:
-      "403\nelWpKwtFF\nClMoPZ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "403<br>elWpKwtFF<br>ClMoPZ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2942,9 +2942,9 @@ export const routePoints = [
   },
   {
     name: "DAL to LAX",
-    data: "687\nUAfYj\nCmB",
+    data: "687<br>UAfYj<br>CmB",
     metadata:
-      "687\nUAfYj\nCmB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "687<br>UAfYj<br>CmB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2962,9 +2962,9 @@ export const routePoints = [
   },
   {
     name: "BOS to FAT",
-    data: "743\nxPJCOxLk\nbcpKocupKy",
+    data: "743<br>xPJCOxLk<br>bcpKocupKy",
     metadata:
-      "743\nxPJCOxLk\nbcpKocupKy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "743<br>xPJCOxLk<br>bcpKocupKy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -2982,9 +2982,9 @@ export const routePoints = [
   },
   {
     name: "AVL to MHT",
-    data: "127\nDmlivZ\nZviGsf",
+    data: "127<br>DmlivZ<br>ZviGsf",
     metadata:
-      "127\nDmlivZ\nZviGsf<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "127<br>DmlivZ<br>ZviGsf<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3002,9 +3002,9 @@ export const routePoints = [
   },
   {
     name: "CVG to MHT",
-    data: "472\nRMgo\nDuIZ",
+    data: "472<br>RMgo<br>DuIZ",
     metadata:
-      "472\nRMgo\nDuIZ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "472<br>RMgo<br>DuIZ<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3022,9 +3022,9 @@ export const routePoints = [
   },
   {
     name: "JAN to CRP",
-    data: "741\nfSqy\nPKesLqEjjn",
+    data: "741<br>fSqy<br>PKesLqEjjn",
     metadata:
-      "741\nfSqy\nPKesLqEjjn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "741<br>fSqy<br>PKesLqEjjn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3042,9 +3042,9 @@ export const routePoints = [
   },
   {
     name: "DCA to LAX",
-    data: "151\nVdFkNc\nEc",
+    data: "151<br>VdFkNc<br>Ec",
     metadata:
-      "151\nVdFkNc\nEc<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "151<br>VdFkNc<br>Ec<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3062,9 +3062,9 @@ export const routePoints = [
   },
   {
     name: "SJC to STL",
-    data: "750\nBE\nnfHy",
+    data: "750<br>BE<br>nfHy",
     metadata:
-      "750\nBE\nnfHy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "750<br>BE<br>nfHy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3082,9 +3082,9 @@ export const routePoints = [
   },
   {
     name: "MSP to PHL",
-    data: "789\nidPnjKhhrx\nI",
+    data: "789<br>idPnjKhhrx<br>I",
     metadata:
-      "789\nidPnjKhhrx\nI<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "789<br>idPnjKhhrx<br>I<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3102,9 +3102,9 @@ export const routePoints = [
   },
   {
     name: "ICT to PVD",
-    data: "935\nhGsNCABsX\nzrnhVxIQX",
+    data: "935<br>hGsNCABsX<br>zrnhVxIQX",
     metadata:
-      "935\nhGsNCABsX\nzrnhVxIQX<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "935<br>hGsNCABsX<br>zrnhVxIQX<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3122,9 +3122,9 @@ export const routePoints = [
   },
   {
     name: "PWM to MYR",
-    data: "897\nzd\nxL",
+    data: "897<br>zd<br>xL",
     metadata:
-      "897\nzd\nxL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "897<br>zd<br>xL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3142,9 +3142,9 @@ export const routePoints = [
   },
   {
     name: "MSN to SNA",
-    data: "846\njYhQpfUoI\nKlMCFbGd",
+    data: "846<br>jYhQpfUoI<br>KlMCFbGd",
     metadata:
-      "846\njYhQpfUoI\nKlMCFbGd<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "846<br>jYhQpfUoI<br>KlMCFbGd<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3162,9 +3162,9 @@ export const routePoints = [
   },
   {
     name: "LAS to OAK",
-    data: "28\neMjWjC\nOlYyFmUh",
+    data: "28<br>eMjWjC<br>OlYyFmUh",
     metadata:
-      "28\neMjWjC\nOlYyFmUh<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "28<br>eMjWjC<br>OlYyFmUh<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3182,9 +3182,9 @@ export const routePoints = [
   },
   {
     name: "MHT to GSP",
-    data: "720\nuILhPTPXDc\nYtFtdwy",
+    data: "720<br>uILhPTPXDc<br>YtFtdwy",
     metadata:
-      "720\nuILhPTPXDc\nYtFtdwy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "720<br>uILhPTPXDc<br>YtFtdwy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3202,9 +3202,9 @@ export const routePoints = [
   },
   {
     name: "STL to CHS",
-    data: "476\nNEL\nvGIR",
+    data: "476<br>NEL<br>vGIR",
     metadata:
-      "476\nNEL\nvGIR<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "476<br>NEL<br>vGIR<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3222,9 +3222,9 @@ export const routePoints = [
   },
   {
     name: "RIC to JFK",
-    data: "545\ncCt\nM",
+    data: "545<br>cCt<br>M",
     metadata:
-      "545\ncCt\nM<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "545<br>cCt<br>M<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3242,9 +3242,9 @@ export const routePoints = [
   },
   {
     name: "CVG to MFE",
-    data: "469\nzVUo\nRa",
+    data: "469<br>zVUo<br>Ra",
     metadata:
-      "469\nzVUo\nRa<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "469<br>zVUo<br>Ra<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3262,9 +3262,9 @@ export const routePoints = [
   },
   {
     name: "ANC to ORD",
-    data: "670\nDEaVgSaolF\nvE",
+    data: "670<br>DEaVgSaolF<br>vE",
     metadata:
-      "670\nDEaVgSaolF\nvE<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "670<br>DEaVgSaolF<br>vE<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3282,9 +3282,9 @@ export const routePoints = [
   },
   {
     name: "BTV to MCO",
-    data: "648\nxLbN\nhw",
+    data: "648<br>xLbN<br>hw",
     metadata:
-      "648\nxLbN\nhw<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "648<br>xLbN<br>hw<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3302,9 +3302,9 @@ export const routePoints = [
   },
   {
     name: "CLE to MIA",
-    data: "146\nvViqK\nNEiuAizV",
+    data: "146<br>vViqK<br>NEiuAizV",
     metadata:
-      "146\nvViqK\nNEiuAizV<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "146<br>vViqK<br>NEiuAizV<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3322,9 +3322,9 @@ export const routePoints = [
   },
   {
     name: "IND to BZN",
-    data: "680\nfvnq\nifKCiPsRxe",
+    data: "680<br>fvnq<br>ifKCiPsRxe",
     metadata:
-      "680\nfvnq\nifKCiPsRxe<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "680<br>fvnq<br>ifKCiPsRxe<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3342,9 +3342,9 @@ export const routePoints = [
   },
   {
     name: "LIT to LAX",
-    data: "445\nZ\nDXtN",
+    data: "445<br>Z<br>DXtN",
     metadata:
-      "445\nZ\nDXtN<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "445<br>Z<br>DXtN<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3362,9 +3362,9 @@ export const routePoints = [
   },
   {
     name: "ANC to MSP",
-    data: "316\np\noX",
+    data: "316<br>p<br>oX",
     metadata:
-      "316\np\noX<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "316<br>p<br>oX<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3382,9 +3382,9 @@ export const routePoints = [
   },
   {
     name: "DEN to CLE",
-    data: "315\nvFUMxszF\nPHx",
+    data: "315<br>vFUMxszF<br>PHx",
     metadata:
-      "315\nvFUMxszF\nPHx<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "315<br>vFUMxszF<br>PHx<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3402,9 +3402,9 @@ export const routePoints = [
   },
   {
     name: "HOU to ANC",
-    data: "153\nhklWZxAOE\nuFzGvUyDw",
+    data: "153<br>hklWZxAOE<br>uFzGvUyDw",
     metadata:
-      "153\nhklWZxAOE\nuFzGvUyDw<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "153<br>hklWZxAOE<br>uFzGvUyDw<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3422,9 +3422,9 @@ export const routePoints = [
   },
   {
     name: "TYS to ELP",
-    data: "67\nJKcKH\nUGZLCCnZCH",
+    data: "67<br>JKcKH<br>UGZLCCnZCH",
     metadata:
-      "67\nJKcKH\nUGZLCCnZCH<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "67<br>JKcKH<br>UGZLCCnZCH<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3442,9 +3442,9 @@ export const routePoints = [
   },
   {
     name: "MCI to ORF",
-    data: "537\nmJqPrc\nxLtPVy",
+    data: "537<br>mJqPrc<br>xLtPVy",
     metadata:
-      "537\nmJqPrc\nxLtPVy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "537<br>mJqPrc<br>xLtPVy<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3462,9 +3462,9 @@ export const routePoints = [
   },
   {
     name: "MSP to FAT",
-    data: "635\nEUZwcBfC\nPUxi",
+    data: "635<br>EUZwcBfC<br>PUxi",
     metadata:
-      "635\nEUZwcBfC\nPUxi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "635<br>EUZwcBfC<br>PUxi<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3482,9 +3482,9 @@ export const routePoints = [
   },
   {
     name: "TUS to BDL",
-    data: "849\nKCfm\nzfZzxAf",
+    data: "849<br>KCfm<br>zfZzxAf",
     metadata:
-      "849\nKCfm\nzfZzxAf<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "849<br>KCfm<br>zfZzxAf<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3502,9 +3502,9 @@ export const routePoints = [
   },
   {
     name: "PVD to FAT",
-    data: "280\nHSRKbVFtLg\no",
+    data: "280<br>HSRKbVFtLg<br>o",
     metadata:
-      "280\nHSRKbVFtLg\no<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "280<br>HSRKbVFtLg<br>o<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3522,9 +3522,9 @@ export const routePoints = [
   },
   {
     name: "CLT to HNL",
-    data: "295\nTo\nJKYe",
+    data: "295<br>To<br>JKYe",
     metadata:
-      "295\nTo\nJKYe<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "295<br>To<br>JKYe<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3542,9 +3542,9 @@ export const routePoints = [
   },
   {
     name: "SJC to MIA",
-    data: "132\noUk\nXiVAvTHL",
+    data: "132<br>oUk<br>XiVAvTHL",
     metadata:
-      "132\noUk\nXiVAvTHL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "132<br>oUk<br>XiVAvTHL<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3562,9 +3562,9 @@ export const routePoints = [
   },
   {
     name: "DAL to OMA",
-    data: "863\nvdFQxUQejv\npSvjKGFo",
+    data: "863<br>vdFQxUQejv<br>pSvjKGFo",
     metadata:
-      "863\nvdFQxUQejv\npSvjKGFo<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "863<br>vdFQxUQejv<br>pSvjKGFo<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3582,9 +3582,9 @@ export const routePoints = [
   },
   {
     name: "ELP to HSV",
-    data: "374\npxWXd\nKfCcLVAjuF",
+    data: "374<br>pxWXd<br>KfCcLVAjuF",
     metadata:
-      "374\npxWXd\nKfCcLVAjuF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "374<br>pxWXd<br>KfCcLVAjuF<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3602,9 +3602,9 @@ export const routePoints = [
   },
   {
     name: "BTR to SMF",
-    data: "276\nKoQU\nCIzlhgEDr",
+    data: "276<br>KoQU<br>CIzlhgEDr",
     metadata:
-      "276\nKoQU\nCIzlhgEDr<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "276<br>KoQU<br>CIzlhgEDr<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3622,9 +3622,9 @@ export const routePoints = [
   },
   {
     name: "TPA to SAV",
-    data: "43\ncdBqbMDwCF\nz",
+    data: "83<br>cdBqbMDwCF<br>z",
     metadata:
-      "43\ncdBqbMDwCF\nz<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "83<br>cdBqbMDwCF<br>z<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3642,9 +3642,9 @@ export const routePoints = [
   },
   {
     name: "ICT to HOU",
-    data: "171\nq\nYJdxhuWxz",
+    data: "171<br>q<br>YJdxhuWxz",
     metadata:
-      "171\nq\nYJdxhuWxz<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "171<br>q<br>YJdxhuWxz<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3662,9 +3662,9 @@ export const routePoints = [
   },
   {
     name: "PDX to SAN",
-    data: "469\nCZuPS\nV",
+    data: "469<br>CZuPS<br>V",
     metadata:
-      "469\nCZuPS\nV<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "469<br>CZuPS<br>V<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3682,9 +3682,9 @@ export const routePoints = [
   },
   {
     name: "MDW to ORF",
-    data: "996\ngiyA\nP",
+    data: "996<br>giyA<br>P",
     metadata:
-      "996\ngiyA\nP<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "996<br>giyA<br>P<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3702,9 +3702,9 @@ export const routePoints = [
   },
   {
     name: "SFO to BWI",
-    data: "404\nSvQBl\nAVJcULjl",
+    data: "404<br>SvQBl<br>AVJcULjl",
     metadata:
-      "404\nSvQBl\nAVJcULjl<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "404<br>SvQBl<br>AVJcULjl<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3722,9 +3722,9 @@ export const routePoints = [
   },
   {
     name: "DFW to DCA",
-    data: "407\nP\nKg",
+    data: "407<br>P<br>Kg",
     metadata:
-      "407\nP\nKg<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "407<br>P<br>Kg<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3742,9 +3742,9 @@ export const routePoints = [
   },
   {
     name: "OMA to BUR",
-    data: "771\nfKjR\nbJbAWDwr",
+    data: "771<br>fKjR<br>bJbAWDwr",
     metadata:
-      "771\nfKjR\nbJbAWDwr<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "771<br>fKjR<br>bJbAWDwr<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3762,9 +3762,9 @@ export const routePoints = [
   },
   {
     name: "FAT to SAV",
-    data: "39\nVpNhFrWp\nzkDMpuveQN",
+    data: "39<br>VpNhFrWp<br>zkDMpuveQN",
     metadata:
-      "39\nVpNhFrWp\nzkDMpuveQN<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "39<br>VpNhFrWp<br>zkDMpuveQN<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3782,9 +3782,9 @@ export const routePoints = [
   },
   {
     name: "CRP to SNA",
-    data: "943\nGmWkjdm\nXKCaJsZjn",
+    data: "943<br>GmWkjdm<br>XKCaJsZjn",
     metadata:
-      "943\nGmWkjdm\nXKCaJsZjn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "943<br>GmWkjdm<br>XKCaJsZjn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3802,9 +3802,9 @@ export const routePoints = [
   },
   {
     name: "PHL to PWM",
-    data: "640\nKnEZZOZtxo\ngAvrCjTGxc",
+    data: "640<br>KnEZZOZtxo<br>gAvrCjTGxc",
     metadata:
-      "640\nKnEZZOZtxo\ngAvrCjTGxc<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "640<br>KnEZZOZtxo<br>gAvrCjTGxc<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3822,9 +3822,9 @@ export const routePoints = [
   },
   {
     name: "SAV to OAK",
-    data: "665\nTyQvkSd\nKJFCkkJSLf",
+    data: "665<br>TyQvkSd<br>KJFCkkJSLf",
     metadata:
-      "665\nTyQvkSd\nKJFCkkJSLf<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "665<br>TyQvkSd<br>KJFCkkJSLf<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3842,9 +3842,9 @@ export const routePoints = [
   },
   {
     name: "DAY to LYS",
-    data: "605\nFzSbwmzqqU\nNjpn",
+    data: "605<br>FzSbwmzqqU<br>Njpn",
     metadata:
-      "605\nFzSbwmzqqU\nNjpn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "605<br>FzSbwmzqqU<br>Njpn<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3862,9 +3862,9 @@ export const routePoints = [
   },
   {
     name: "OMA to BER",
-    data: "835\nDeGO\ncFMmifFhb",
+    data: "835<br>DeGO<br>cFMmifFhb",
     metadata:
-      "835\nDeGO\ncFMmifFhb<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "835<br>DeGO<br>cFMmifFhb<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3882,9 +3882,9 @@ export const routePoints = [
   },
   {
     name: "DUB to SDF",
-    data: "146\ndoXBfaLM\ngzfLfB",
+    data: "146<br>doXBfaLM<br>gzfLfB",
     metadata:
-      "146\ndoXBfaLM\ngzfLfB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "146<br>doXBfaLM<br>gzfLfB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3902,9 +3902,9 @@ export const routePoints = [
   },
   {
     name: "LGB to ANC",
-    data: "594\nzhTLV\nnyOOPCB",
+    data: "594<br>zhTLV<br>nyOOPCB",
     metadata:
-      "594\nzhTLV\nnyOOPCB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "594<br>zhTLV<br>nyOOPCB<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3922,9 +3922,9 @@ export const routePoints = [
   },
   {
     name: "LIT to DUS",
-    data: "633\nDLpnrmvPO\njQpJhGxm",
+    data: "633<br>DLpnrmvPO<br>jQpJhGxm",
     metadata:
-      "633\nDLpnrmvPO\njQpJhGxm<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "633<br>DLpnrmvPO<br>jQpJhGxm<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,
@@ -3942,9 +3942,9 @@ export const routePoints = [
   },
   {
     name: "CDG to BHM",
-    data: "724\nEX\npRSkvwav",
+    data: "724<br>EX<br>pRSkvwav",
     metadata:
-      "724\nEX\npRSkvwav<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
+      "724<br>EX<br>pRSkvwav<br>Z3 t350 PPN p350<br>OSMOB h..m...<br>134.765<br>V<br>@h221@k260 @m.77@36",
     points: [
       {
         time: 1674228873,

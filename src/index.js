@@ -9,16 +9,20 @@ import { TimelineSlider } from "./components/TimelineSlider";
 import { v4 as uuidv4 } from "uuid";
 import aircraftIcon from "./assets/square-modified.png";
 import _debounce from "lodash.debounce";
+import { FlightsTable } from "./components/FlightsTable";
+import { DrawAllRoute } from "./components/DrawAllRoute";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibmVsbGl0IiwiYSI6ImNrb3dncHdnOTA1emQybnBkZ3N1MjhzYW8ifQ.uqKPevtCLOPOjX88-7ZK9w";
 
-export const MAX_TIMESTAMP = 1674249811; // Friday, 20 January 2023 21:23:31
-export const MIN_TIMESTAMP = 1674221811; // Friday, 20 January 2023 13:36:51
-export const NOW_TIMESTAMP = 1674227811; // Friday, 20 January 2023 14:43:31;
+export const MAX_TIMESTAMP = 1674249811;
+export const MIN_TIMESTAMP = 1674221811;
+export const NOW_TIMESTAMP = 1674227811;
 
 function App() {
   const [map, setMap] = useState(null);
+  const [selectedFlight, setSelectedFlight] = useState(null);
+
   const [timestamp, setTimestamp] = useState(NOW_TIMESTAMP);
   const [flights, setFlights] = useState([]);
 
@@ -79,8 +83,7 @@ function App() {
   }, []);
   const isFlightVisible = useCallback(
     (flight) =>
-      flight.timestamp >= MIN_TIMESTAMP &&
-      flight.timestamp <= MAX_TIMESTAMP,
+      flight.timestamp >= MIN_TIMESTAMP && flight.timestamp <= MAX_TIMESTAMP,
     []
   );
   useEffect(() => {
@@ -95,7 +98,14 @@ function App() {
     (value) => debouncedSetTimestamp(parseInt(value)),
     [debouncedSetTimestamp]
   );
-
+  const handleFlightClick = (flight) => {
+    if (selectedFlight && selectedFlight.id === flight.id) {
+      // Clear selected flight if the same row is clicked again
+      setSelectedFlight(null);
+    } else {
+      setSelectedFlight(flight);
+    }
+  };
   return (
     <div className="wrapper">
       <div id="map">
@@ -110,6 +120,14 @@ function App() {
                 id={flight.id}
               />
             ))}
+            <FlightsTable flights={flights} onFlightClick={handleFlightClick} />
+            {selectedFlight && (
+              <DrawAllRoute
+                routePoints={selectedFlight?.routePoints?.points}
+                map={map}
+                id={uuidv4()}
+              />
+            )}
             <div
               style={{
                 position: "absolute",

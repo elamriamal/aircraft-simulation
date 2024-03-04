@@ -58,3 +58,94 @@ body {
 .mapboxgl-popup-tip{
   display: none;
 }
+
+.timeline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 2.5rem;
+  padding: 0.5rem;
+  display: flex;
+  background: #202020;
+}
+
+.flight-table {
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.toggle-button-container {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.toggle-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #888; 
+  border: none;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+.dark-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-table td {
+  font-size: 13px;
+  padding: 14px;
+  text-align: left;
+  line-height: 25px;
+  border-bottom: 1px solid #555;
+}
+
+
+.dark-table tbody tr {
+  background-color: #444;
+  border-radius: 10px;
+  margin-bottom: 10px; /* Add spacing between rows */
+}
+
+.dark-table tbody tr:hover {
+  background-color: #555;
+}
+/* Scrollbar */
+.table-container::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Scrollbar Track */
+.table-container::-webkit-scrollbar-track {
+  background: #333; /* Background color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners of the scrollbar track */
+}
+
+/* Scrollbar Handle */
+.table-container::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners of the scrollbar handle */
+}
+
+/* Scrollbar Handle on hover */
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #666; /* Color of the scrollbar handle on hover */
+}
