@@ -7,6 +7,7 @@ const FlightTracker = React.memo(
     startLongitude,
     currentLatitude,
     currentLongitude,
+    isInFlight,
     map,
     id,
   }) => {
@@ -68,7 +69,7 @@ const FlightTracker = React.memo(
         map.addLayer({
           id: LAST_POINTS_LAYER_ID,
           type: "circle",
-           minzoom: 5,
+          minzoom: 5,
           source: LAST_POINTS_SOURCE_ID,
           paint: {
             "circle-radius": 3,
@@ -83,10 +84,21 @@ const FlightTracker = React.memo(
       }
 
       return () => {
-        map.removeLayer(LAST_POINTS_LAYER_ID);
-        map.removeSource(LAST_POINTS_SOURCE_ID);
+        if (!isInFlight) {
+          if (map.getLayer(LAST_POINTS_LAYER_ID))
+            map.removeLayer(LAST_POINTS_LAYER_ID);
+          if (map.getSource(LAST_POINTS_SOURCE_ID))
+            map.removeSource(LAST_POINTS_SOURCE_ID);
+          return;
+        }
       };
-    }, [LAST_POINTS_SOURCE_ID, LAST_POINTS_LAYER_ID, map, positions]);
+    }, [
+      LAST_POINTS_SOURCE_ID,
+      LAST_POINTS_LAYER_ID,
+      isInFlight,
+      map,
+      positions,
+    ]);
 
     useEffect(calculateFlightPath, [calculateFlightPath]);
 

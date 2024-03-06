@@ -8,7 +8,6 @@ import Flight from "./components/Flight";
 import { TimelineSlider } from "./components/TimelineSlider";
 import { v4 as uuidv4 } from "uuid";
 import aircraftIcon from "./assets/square-modified.png";
-import _debounce from "lodash.debounce";
 import { FlightsTable } from "./components/FlightsTable";
 import { DrawAllRoute } from "./components/DrawAllRoute";
 
@@ -17,19 +16,23 @@ mapboxgl.accessToken =
 
 export const MAX_TIMESTAMP = 1674249811;
 export const MIN_TIMESTAMP = 1674221811;
-export const NOW_TIMESTAMP = 1674227811;
+export const NOW_TIMESTAMP = 1674226811;
 
 function App() {
   const [map, setMap] = useState(null);
   const [selectedFlight, setSelectedFlight] = useState(null);
-
   const [timestamp, setTimestamp] = useState(NOW_TIMESTAMP);
+  const [, setIsPlaying] = useState(false);
   const [flights, setFlights] = useState([]);
 
-  const debouncedSetTimestamp = useCallback(
-    _debounce((value) => setTimestamp(value), 20),
-    []
-  );
+  const handleChange = (newValue) => {
+    setTimestamp(newValue);
+  };
+
+  const handlePlayPause = (playing) => {
+    setIsPlaying(playing);
+  };
+
 
   useEffect(() => {
     const loadMap = async () => {
@@ -94,10 +97,6 @@ function App() {
     );
   }, [timestamp, isFlightVisible]);
 
-  const handleChange = useCallback(
-    (value) => debouncedSetTimestamp(parseInt(value)),
-    [debouncedSetTimestamp]
-  );
   const handleFlightClick = (flight) => {
     if (selectedFlight && selectedFlight.id === flight.id) {
       // Clear selected flight if the same row is clicked again
@@ -106,6 +105,7 @@ function App() {
       setSelectedFlight(flight);
     }
   };
+
   return (
     <div className="wrapper">
       <div id="map">
@@ -120,7 +120,11 @@ function App() {
                 id={flight.id}
               />
             ))}
-            <FlightsTable flights={flights} onFlightClick={handleFlightClick} selectedFlight={selectedFlight} />
+            <FlightsTable
+              flights={flights}
+              onFlightClick={handleFlightClick}
+              selectedFlight={selectedFlight}
+            />
             {selectedFlight && (
               <DrawAllRoute
                 routePoints={selectedFlight?.routePoints?.points}
@@ -135,22 +139,22 @@ function App() {
                 left: 0,
                 right: 0,
                 zIndex: 5,
-                height: "2.5rem",
                 padding: "0.5rem",
                 display: "flex",
                 background: "#202020",
               }}
             >
-              <div style={{ width: "80px" }}>
-                Temps:{" "}
-                {new Date(timestamp * 1000).toLocaleTimeString().slice(0, -3)}
+              <div style={{ width: "max-content" }}>
+                Time:{" "}
+                {new Date(timestamp * 1000).toLocaleTimeString()}
               </div>
               <TimelineSlider
-                min={MIN_TIMESTAMP}
-                max={MAX_TIMESTAMP}
                 value={timestamp}
-                step={10}
                 handleChange={handleChange}
+                handlePlayPause={handlePlayPause}
+                minTimestamp={MIN_TIMESTAMP}
+                maxTimestamp={MAX_TIMESTAMP}
+                step={1}
               />
             </div>
           </>

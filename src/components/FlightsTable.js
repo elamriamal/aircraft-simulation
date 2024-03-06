@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 
 // Composant de tableau d'avions
-export const FlightsTable = ({ flights, onFlightClick, selectedFlight  }) => {
+export const FlightsTable = ({ flights, onFlightClick, selectedFlight }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
   };
+
+  const flightsInFlight = flights.filter((flight) => {
+    return (
+      flight.timestamp >= flight.routePoints.points[0].time &&
+      flight.timestamp <=
+        flight.routePoints.points[flight.routePoints.points.length - 1].time
+    );
+  });
+
   return (
     <div className={`flight-table ${isOpen ? "open" : "closed"}`}>
       <div className="toggle-button-container">
@@ -19,9 +28,18 @@ export const FlightsTable = ({ flights, onFlightClick, selectedFlight  }) => {
           <>
             <table className="dark-table">
               <tbody>
-                {flights.map((flight) => (
-                  <tr key={flight.id} onClick={() => onFlightClick(flight)}
-                  style={{ backgroundColor: selectedFlight && selectedFlight.id === flight.id ? '#555' : 'transparent', cursor: 'pointer' }}>
+                {flightsInFlight.map((flight) => (
+                  <tr
+                    key={flight.id}
+                    onClick={() => onFlightClick(flight)}
+                    style={{
+                      backgroundColor:
+                        selectedFlight && selectedFlight.id === flight.id
+                          ? "#555"
+                          : "transparent",
+                      cursor: "pointer",
+                    }}
+                  >
                     <td>{flight?.routePoints?.name}</td>
                     <td
                       dangerouslySetInnerHTML={{

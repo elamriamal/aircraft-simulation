@@ -73,9 +73,9 @@ body {
 
 .flight-table {
   position: absolute;
-  bottom: 50px;
+  bottom: 70px;
   right: 20px;
-  width: 400px;
+  width: 300px;
   border-radius: 8px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -96,6 +96,7 @@ body {
   width: 100%;
   padding: 10px;
   background-color: #888; 
+  font-size: 12px;
   border: none;
   border-radius: 8px 8px 0 0;
   font-weight: bold;
@@ -111,10 +112,10 @@ body {
 }
 
 .dark-table td {
-  font-size: 13px;
+  font-size: 11px;
   padding: 14px;
   text-align: left;
-  line-height: 25px;
+  line-height: 20px;
   border-bottom: 1px solid #555;
 }
 
@@ -148,4 +149,48 @@ body {
 /* Scrollbar Handle on hover */
 .table-container::-webkit-scrollbar-thumb:hover {
   background: #666; /* Color of the scrollbar handle on hover */
+}
+
+.timeline-slider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.timeline-slider input[type="range"] {
+  flex: 1;
+  margin-right: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  border-radius: 50px;
+}
+
+/* .timeline-slider input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #007bff 0%, #007bff var(--passedPercentage), #ffffff var(--passedPercentage), #ffffff 100%);
+} */
+
+.timeline-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+.timeline-slider button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.timeline-slider input[type="number"] {
+  width: 50px;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #007bff;
 }
