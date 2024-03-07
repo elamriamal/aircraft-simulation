@@ -191,7 +191,7 @@ const Flight = ({ map, routePoints, timestamp, id, isOnOff }) => {
             source: TEXT_SOURCE_ID,
             layout: {
               "text-field": ["get", "data"],
-              "text-size": 14,
+              "text-size": 10,
               "text-justify": "left",
               "text-anchor": "left",
               "text-offset": [0, 1],
