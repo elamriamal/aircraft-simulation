@@ -194,3 +194,93 @@ body {
   border-radius: 5px;
   border: 1px solid #007bff;
 }
+.onoffswitch {
+    position: absolute;
+    width: 90px;
+    bottom: 70px;
+    left: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;  
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  position: relative; /* Added relative positioning */
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 20px;
+  background-color: #333;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in-out;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  position: relative; /* Added relative positioning */
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "OFF";
+  padding-left: 10px;
+}
+
+.onoffswitch-inner:after {
+  content: "ON";
+  padding-left: 50px;
+}
+
+.onoffswitch-switch {
+  z-index: 1; /* Ensure the switch is above the labels */
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 2.5px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.off .onoffswitch-inner:before {
+  content: "ON";
+  padding-right: 10px;
+}
+
+.off .onoffswitch-inner:after {
+  content: "OFF";
+  padding-left: 10px;
+}
+
+.on .onoffswitch-switch {
+  background-color: #66bb6a;
+}
+
+.off .onoffswitch-switch {
+  right: 2.5px;
+  background-color: #ef5350;
+}

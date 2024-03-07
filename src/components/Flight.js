@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import FlightTracker from "./FlightTracker";
 import { DrawAllRoute } from "./DrawAllRoute";
 
-const Flight = ({ map, routePoints, timestamp, id }) => {
+const Flight = ({ map, routePoints, timestamp, id, isOnOff }) => {
   const AIRPLANE_SOURCE_ID = useMemo(() => `AIRPLANE_SOURCE_ID_${id}`, [id]);
   const AIRPLANE_LAYER_ID = useMemo(() => `AIRPLANE_LAYER_ID_${id}`, [id]);
   const TEXT_SOURCE_ID = useMemo(() => `TEXT_SOURCE_ID_${id}`, [id]);
@@ -26,6 +26,18 @@ const Flight = ({ map, routePoints, timestamp, id }) => {
   const isInFlight =
     timestamp >= routePoints.points[0].time &&
     timestamp <= routePoints.points[routePoints.points.length - 1].time;
+  const addSource = (sourceId, sourceConfig) => {
+    if (!map.getSource(sourceId)) {
+      map.addSource(sourceId, sourceConfig);
+    }
+  };
+
+  const addLayer = (layerConfig) => {
+    const existingLayer = map.getLayer(layerConfig.id);
+    if (!existingLayer) {
+      map.addLayer(layerConfig);
+    }
+  };
   useEffect(() => {
     if (!map) return;
     // Check if the source and layer exist before removing
@@ -38,19 +50,6 @@ const Flight = ({ map, routePoints, timestamp, id }) => {
       if (map.getSource(TEXT_SOURCE_ID)) map.removeSource(TEXT_SOURCE_ID);
       return;
     }
-
-    const addSource = (sourceId, sourceConfig) => {
-      if (!map.getSource(sourceId)) {
-        map.addSource(sourceId, sourceConfig);
-      }
-    };
-
-    const addLayer = (layerConfig) => {
-      const existingLayer = map.getLayer(layerConfig.id);
-      if (!existingLayer) {
-        map.addLayer(layerConfig);
-      }
-    };
 
     addSource(AIRPLANE_SOURCE_ID, {
       type: "geojson",
@@ -78,51 +77,6 @@ const Flight = ({ map, routePoints, timestamp, id }) => {
           1,
           0.6,
         ],
-      },
-    });
-
-    addSource(TEXT_SOURCE_ID, {
-      type: "geojson",
-
-      data: {
-        type: "FeatureCollection",
-        features: [],
-      },
-    });
-
-    addLayer({
-      id: TEXT_LAYER_ID,
-      type: "symbol",
-      minzoom: 5,
-      source: TEXT_SOURCE_ID,
-      layout: {
-        "text-field": ["get", "data"],
-        "text-size": 14,
-        "text-justify": "left",
-        "text-anchor": "left",
-        "text-offset": [0, 1],
-      },
-      paint: {
-        "text-color": "#ffffff",
-        "text-translate": [15, 15],
-      },
-    });
-
-    addLayer({
-      id: TEXT_LAYER_ID,
-      type: "symbol",
-      minzoom: 5,
-      source: TEXT_SOURCE_ID,
-      layout: {
-        "text-field": ["get", "data"],
-        "text-size": 14,
-        "text-justify": "left",
-        "text-anchor": "left",
-        "text-offset": [0, 1],
-      },
-      paint: {
-        "text-color": "#ffffff",
-        "text-translate": [15, 15],
       },
     });
 
@@ -215,6 +169,39 @@ const Flight = ({ map, routePoints, timestamp, id }) => {
           "\n"
         ); // Replace <br> with \n
         updateSourceData(TEXT_SOURCE_ID, positionFeature);
+
+        // Conditionally show or remove the text layer based on isOnOff
+        if (!isOnOff) {
+          // If isOnOff is false, remove the text layer
+          if (map.getLayer(TEXT_LAYER_ID)) map.removeLayer(TEXT_LAYER_ID);
+          if (map.getSource(TEXT_SOURCE_ID)) map.removeSource(TEXT_SOURCE_ID);
+        } else {
+          // If isOnOff is true, add or update the text layer
+          addSource(TEXT_SOURCE_ID, {
+            type: "geojson",
+            data: {
+              type: "FeatureCollection",
+              features: [positionFeature],
+            },
+          });
+
+          addLayer({
+            id: TEXT_LAYER_ID,
+            type: "symbol",
+            source: TEXT_SOURCE_ID,
+            layout: {
+              "text-field": ["get", "data"],
+              "text-size": 14,
+              "text-justify": "left",
+              "text-anchor": "left",
+              "text-offset": [0, 1],
+            },
+            paint: {
+              "text-color": "#ffffff",
+              "text-translate": [15, 15],
+            },
+          });
+        }
       }
     }
 
@@ -234,6 +221,7 @@ const Flight = ({ map, routePoints, timestamp, id }) => {
     map,
     routePoints,
     timestamp,
+    isOnOff,
   ]);
 
   let fHover = null;

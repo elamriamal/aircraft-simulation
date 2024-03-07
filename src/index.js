@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from "uuid";
 import aircraftIcon from "./assets/square-modified.png";
 import { FlightsTable } from "./components/FlightsTable";
 import { DrawAllRoute } from "./components/DrawAllRoute";
+import OnOffButton from "./components/OnOffButton";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibmVsbGl0IiwiYSI6ImNrb3dncHdnOTA1emQybnBkZ3N1MjhzYW8ifQ.uqKPevtCLOPOjX88-7ZK9w";
@@ -24,7 +25,11 @@ function App() {
   const [timestamp, setTimestamp] = useState(NOW_TIMESTAMP);
   const [, setIsPlaying] = useState(false);
   const [flights, setFlights] = useState([]);
+  const [isOnOff, setIsOnOff] = useState(false);
 
+  const handleIsOnOff = (data) => {
+    setIsOnOff(data);
+  };
   const handleChange = (newValue) => {
     setTimestamp(newValue);
   };
@@ -32,7 +37,6 @@ function App() {
   const handlePlayPause = (playing) => {
     setIsPlaying(playing);
   };
-
 
   useEffect(() => {
     const loadMap = async () => {
@@ -118,6 +122,7 @@ function App() {
                 map={map}
                 timestamp={flight.timestamp}
                 id={flight.id}
+                isOnOff={isOnOff}
               />
             ))}
             <FlightsTable
@@ -132,6 +137,7 @@ function App() {
                 id={uuidv4()}
               />
             )}
+            <OnOffButton isOnOff={handleIsOnOff} />
             <div
               style={{
                 position: "absolute",
@@ -146,7 +152,7 @@ function App() {
             >
               <div style={{ width: "max-content" }}>
                 Time:{" "}
-                {new Date(timestamp * 1000).toLocaleTimeString()}
+                 {new Date(timestamp * 1000).toLocaleTimeString()}
               </div>
               <TimelineSlider
                 value={timestamp}
